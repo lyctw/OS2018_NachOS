@@ -97,6 +97,15 @@ Initializing the address space in AddrSpace::AddrSpace
 
 We should modify `addrspace.cc`, Since the initial code only provides one address space, and you must allocate a new address space for each user program.
 
+### Linear Page Tables
+With linear tables, the MMU splits a virtual address into page number and page offset components. The page number is used to index into an array of page table entries. The actual physical address is the concatenation of the page frame number in the page table entry and the page offset of the virtual address.
+
+To use linear page tables, one simply initializes variable machine->pageTable to point to the page table used to perform translations. In general, each user process will have its own private page table. Thus, a process switch requires updating the pageTable variable. In a real machine, pageTable would correspond to a special register that would be saved and restored as part of the SWITCH() operation. The machine variable pageTableSize indicates the actual size of the page table.
+
+Page table entries consist of the physical page frame number for the corresponding virtual page, a flag indicating whether the entry is currently valid (set by the OS, inspected by hardware), a flag indicating whether the page may be written (set by OS, inspected by hardware), a bit indicating whether the page has been referenced (set by the hardware, inspected and cleared by OS) and a dirty bit (set by hardware, inspected and cleared by OS).
+
+The Nachos machine has NumPhysPages of physical memory starting at location mainMemory. Thus, page 0 starts at machine->mainMemory, while page N starts at $mainMemory + N * PageSize$
+
 
 
 ## Solution

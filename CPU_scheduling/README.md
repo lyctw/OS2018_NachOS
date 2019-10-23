@@ -2,7 +2,9 @@
 
 ## Part1 - Sleep() system call
 
-## Implementation
+Implement a system call `Sleep()` to issue an exception.  
+
+## Code
 
 * `/code/userprog/syscall.h`
 * `/code/test/start.s`
