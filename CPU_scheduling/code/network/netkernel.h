@@ -13,6 +13,7 @@
 #define NETKERNEL_H
 
 #include "userkernel.h"
+#include "../threads/scheduler.h"
 
 class PostOfficeInput;
 class PostOfficeOutput;
@@ -24,7 +25,9 @@ class NetKernel : public UserProgKernel {
     ~NetKernel();		// deallocate the kernel
 
     void Initialize();		// initialize the kernel 
-
+// yc start
+	  void Initialize(SchedulerType); 
+// yc end
     void Run();			// do kernel stuff 
 
     void SelfTest();		// test whether kernel is working

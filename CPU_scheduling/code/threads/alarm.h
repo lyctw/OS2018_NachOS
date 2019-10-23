@@ -34,12 +34,14 @@ class Bedroom {
         bool MorningCall();
         bool isEmpty();
     private:
+        
         class Bed {
         public:
             Bed(Thread* t, int x): sleeper(t), when(x) {};
             Thread* sleeper;
             int when;
         };
+
         int _current_interrupt;
         std::list<Bed> _beds;
 };

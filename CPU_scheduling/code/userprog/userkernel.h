@@ -16,15 +16,19 @@
 #include "filesys.h"
 #include "machine.h"
 #include "synchdisk.h"
+#include "../threads/scheduler.h" 
+
 class SynchDisk;
 class UserProgKernel : public ThreadedKernel {
   public:
     UserProgKernel(int argc, char **argv);
-				// Interpret command line arguments
+							// Interpret command line arguments
     ~UserProgKernel();		// deallocate the kernel
 
     void Initialize();		// initialize the kernel 
-
+// yc start
+	void Initialize(SchedulerType type);
+// yc end
     void Run();			// do kernel stuff 
 
     void SelfTest();		// test whether kernel is working

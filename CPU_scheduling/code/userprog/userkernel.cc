@@ -50,19 +50,24 @@ UserProgKernel::UserProgKernel(int argc, char **argv)
 // UserProgKernel::Initialize
 // 	Initialize Nachos global data structures.
 //----------------------------------------------------------------------
-
+// yc start
 void
-UserProgKernel::Initialize()
-{
-    ThreadedKernel::Initialize();	// init multithreading
+UserProgKernel::Initialize() {
+	Initialize(RR);
+}
 
-    machine = new Machine(debugUserProg);
+void 
+UserProgKernel::Initialize(SchedulerType type) {
+    ThreadedKernel::Initialize(type);	// init multithreading
+
+	machine = new Machine(debugUserProg);
     fileSystem = new FileSystem();
 #ifdef FILESYS
     synchDisk = new SynchDisk("New SynchDisk");
 #endif // FILESYS
-}
 
+}
+// yc end
 //----------------------------------------------------------------------
 // UserProgKernel::~UserProgKernel
 // 	Nachos is halting.  De-allocate global data structures.
@@ -91,7 +96,6 @@ ForkExecute(Thread *t)
 void
 UserProgKernel::Run()
 {
-
 	cout << "Total threads number is " << execfileNum << endl;
 	for (int n=1;n<=execfileNum;n++)
 		{
@@ -100,6 +104,7 @@ UserProgKernel::Run()
 		t[n]->Fork((VoidFunctionPtr) &ForkExecute, (void *)t[n]);
 		cout << "Thread " << execfile[n] << " is executing." << endl;
 		}
+
 //	Thread *t1 = new Thread(execfile[1]);
 //	Thread *t1 = new Thread("../test/test1");
 //	Thread *t2 = new Thread("../test/test2");

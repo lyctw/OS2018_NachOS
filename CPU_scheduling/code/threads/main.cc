@@ -74,9 +74,19 @@ main(int argc, char **argv)
     debug = new Debug(debugArg);
     
     DEBUG(dbgThread, "Entering main");
-
+// yc start
+	SchedulerType type = RR;
+	if (strcmp(argv[1], "FCFS") == 0) 
+		type = FCFS;
+	else if (strcmp(argv[1], "SJF") == 0) 
+		type = SJF;
+	else if (strcmp(argv[1], "PRIORITY") == 0) 
+		type = Priority;
+	else if (strcmp(argv[1], "RR") == 0) 
+		type = RR;
+//yc end
     kernel = new KernelType(argc, argv);
-    kernel->Initialize();
+    kernel->Initialize(type);
     
     CallOnUserAbort(Cleanup);		// if user hits ctl-C
 

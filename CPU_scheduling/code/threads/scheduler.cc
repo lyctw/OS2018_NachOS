@@ -23,18 +23,45 @@
 #include "scheduler.h"
 #include "main.h"
 
+int SJFCompare(Thread *a, Thread *b) {
+	if (a->getBurstTime() == b->getBurstTime())
+		return 0;
+	return (a->getBurstTime() > b->getBurstTime()) ? 1 : -1;
+}
+int PriorityCompare(Thread *a, Thread *b) {
+	if (a->getPriority() == b->getPriority())
+		return 0;
+	return (a->getPriority() >  b->getPriority()) ? 1 : -1;
+}
+int FCFSCompare(Thread *a, Thread *b) {
+	return 1;
+}
 //----------------------------------------------------------------------
 // Scheduler::Scheduler
 // 	Initialize the list of ready but not running threads.
 //	Initially, no ready threads.
 //----------------------------------------------------------------------
-
-Scheduler::Scheduler()
-{
-//	schedulerType = type;
-	readyList = new List<Thread *>; 
-	toBeDestroyed = NULL;
+Scheduler::Scheduler() {
+	Scheduler(RR);
 } 
+
+Scheduler::Scheduler(SchedulerType type) {
+	schedulerType = type;
+	switch (schedulerType) {
+	case RR:
+			readyList = new List<Thread *>;
+			break;
+	case SJF:
+			readyList = new SortedList<Thread *>(SJFCompare);
+			break;
+	case Priority:
+			readyList = new  SortedList<Thread *>(PriorityCompare);
+			break;
+	case FCFS:
+			readyList = new SortedList<Thread *>(FCFSCompare);
+	}
+	toBeDestroyed = NULL;
+}
 
 //----------------------------------------------------------------------
 // Scheduler::~Scheduler

@@ -44,13 +44,18 @@ ThreadedKernel::ThreadedKernel(int argc, char **argv)
 //	constructor because some of these refer to earlier initialized
 //	data via the "kernel" global variable.
 //----------------------------------------------------------------------
+// yc start
+void
+ThreadedKernel::Initialize() {
+	Initialize(RR);
+}
 
 void
-ThreadedKernel::Initialize()
+ThreadedKernel::Initialize(SchedulerType type)
 {
     stats = new Statistics();		// collect statistics
     interrupt = new Interrupt;		// start up interrupt handling
-    scheduler = new Scheduler();	// initialize the ready queue
+    scheduler = new Scheduler(type);	// initialize the ready queue
     alarm = new Alarm(randomSlice);	// start up time slicing
 
     // We didn't explicitly allocate the current thread we are running in.
@@ -61,7 +66,7 @@ ThreadedKernel::Initialize()
 
     interrupt->Enable();
 }
-
+// yc end
 //----------------------------------------------------------------------
 // ThreadedKernel::~ThreadedKernel
 // 	Nachos is halting.  De-allocate global data structures.
@@ -109,7 +114,7 @@ ThreadedKernel::SelfTest() {
    LibSelfTest();		// test library routines
    
    currentThread->SelfTest();	// test thread switching
-   
+   Thread::SchedulingTest();
    				// test semaphore operation
    semaphore = new Semaphore("test", 0);
    semaphore->SelfTest();
