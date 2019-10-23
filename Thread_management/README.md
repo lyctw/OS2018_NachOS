@@ -1,5 +1,7 @@
 # Thread Management
 
+> [Homework slides](https://hackmd.io/@xlYUTygoRkyuQQlwXuWDWQ/HJHT7nSvB#/)
+
 ## The issue to be solved...
 
 Executing 2 program 

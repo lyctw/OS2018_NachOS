@@ -1,5 +1,7 @@
 # System call & CPU Scheduling
 
+> [Homework slides](https://hackmd.io/@xlYUTygoRkyuQQlwXuWDWQ/rktcRhctB#)
+
 ## Part1 - Sleep() system call
 
 Implement a system call `Sleep()` to issue an exception.  
@@ -163,6 +165,75 @@ Implement scheduling policies
 * `/cod/userprog/userkernel.cc`
 * `/code/network/netkernel.h`
 * `/code/network/netkernel.cc`
+
+### Scheduling Algorithms
+
+The implementation of short term scheduler, it will sort the thread for executing.
+
+```c
+// code/threads/scheduler.cc
+int SJFCompare(Thread *a, Thread *b) {
+	if (a->getBurstTime() == b->getBurstTime())
+		return 0;
+	return (a->getBurstTime() > b->getBurstTime()) ? 1 : -1;
+}
+int PriorityCompare(Thread *a, Thread *b) {
+	if (a->getPriority() == b->getPriority())
+		return 0;
+	return (a->getPriority() >  b->getPriority()) ? 1 : -1;
+}
+int FCFSCompare(Thread *a, Thread *b) {
+	return 1;
+}
+//----------------------------------------------------------------------
+// Scheduler::Scheduler
+// 	Initialize the list of ready but not running threads.
+//	Initially, no ready threads.
+//----------------------------------------------------------------------
+Scheduler::Scheduler() {
+	Scheduler(RR);
+} 
+
+Scheduler::Scheduler(SchedulerType type) {
+	schedulerType = type;
+	switch (schedulerType) {
+	case RR:
+			readyList = new List<Thread *>;
+			break;
+	case SJF:
+			readyList = new SortedList<Thread *>(SJFCompare);
+			break;
+	case Priority:
+			readyList = new  SortedList<Thread *>(PriorityCompare);
+			break;
+	case FCFS:
+			readyList = new SortedList<Thread *>(FCFSCompare);
+	}
+	toBeDestroyed = NULL;
+}
+```
+
+### Test Schedulers
+
+```c
+// code/threads/thread.cc
+void
+Thread::SchedulingTest() {
+	const int thread_num = 4;
+	char *name[thread_num] = {"A", "B", "C", "D"};
+	int thread_priority[thread_num] = {5, 1, 3, 2};
+	int thread_burst[thread_num] = {3, 9, 7, 3};
+
+	Thread *t;
+	for (int i = 0; i < thread_num; i++) {
+		t = new Thread(name[i]);
+		t->setPriority(thread_priority[i]);
+		t->setBurstTime(thread_burst[i]);
+		t->Fork((VoidFunctionPtr) threadBody, (void *)NULL);
+	}
+	kernel->currentThread->Yield();
+}
+```
 
 ### Output
 
