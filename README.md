@@ -137,3 +137,11 @@ Print integer:6
 return value:0
 ```
 
+---
+
+### Reference
+
+* [General Nachos Documentation](https://homes.cs.washington.edu/~tom/nachos/)
+* [Wiki - Not Another Completely Heuristic Operating System](https://en.wikipedia.org/wiki/Not_Another_Completely_Heuristic_Operating_System)
+* [A Road Map Through Nachos](https://users.cs.duke.edu/~narten/110/nachos/main/main.html)
+* [University of Pittsburgh - NachOS](https://people.cs.pitt.edu/~manas/courses/CS1550/nachos.htm)
