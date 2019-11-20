@@ -1,0 +1,10 @@
+#include "syscall.h"
+
+main()
+        {
+                int     n;
+                Sleep(2);
+                for (n=66;n<=168;n++)
+                    if (n%3==1)
+                        { PrintInt(n); }
+        }

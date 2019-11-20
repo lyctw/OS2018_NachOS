@@ -1,0 +1,1488 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+A	test/matmult.c	/^int A[Dim][Dim];$/;"	v
+A	test/sort.c	/^int A[1024];	\/* size of physical memory; with code, we'll run out of space!*\/$/;"	v
+ADDRSPACE_H	userprog/addrspace.h	14;"	d
+ALARM_H	threads/alarm.h	18;"	d
+AOUTHDR	bin/coff.h	/^      } AOUTHDR;$/;"	t	typeref:struct:aouthdr
+AOUTHSZ	bin/coff.h	34;"	d
+AS	test/Makefile	/^AS = $(GCCDIR)as$/;"	m
+ASFLAGS	test/Makefile	/^ASFLAGS = -mips2$/;"	m
+ASSERT	lib/debug.h	63;"	d
+ASSERTNOTREACHED	lib/debug.h	79;"	d
+ASSOC	bin/disasm.c	/^int NROWS=64, ASSOC=1, LINESIZE=4, RAND=0, LRD=0;$/;"	v
+ASSOC	bin/main.c	/^int NROWS=64, ASSOC=1, LINESIZE=4, RAND=0, LRD=0;$/;"	v
+Abort	lib/sysdep.cc	/^Abort()$/;"	f
+Acquire	threads/synch.cc	/^void Lock::Acquire()$/;"	f	class:Lock
+Add	filesys/directory.cc	/^Directory::Add(char *name, int newSector)$/;"	f	class:Directory
+AddrSpace	userprog/addrspace.cc	/^AddrSpace::AddrSpace(): pageTable(0)$/;"	f	class:AddrSpace
+AddrSpace	userprog/addrspace.h	/^class AddrSpace {$/;"	c
+AddressErrorException	machine/machine.h	/^		     AddressErrorException, \/\/ Unaligned reference or one that$/;"	e	enum:ExceptionType
+Alarm	threads/alarm.cc	/^Alarm::Alarm(bool doRandom)$/;"	f	class:Alarm
+Alarm	threads/alarm.h	/^class Alarm : public CallBackObj {$/;"	c
+AllocBoundedArray	lib/sysdep.cc	/^AllocBoundedArray(int size)$/;"	f
+Allocate	filesys/filehdr.cc	/^FileHeader::Allocate(BitMap *freeMap, int fileSize)$/;"	f	class:FileHeader
+AnyFutureInterrupts	machine/interrupt.h	/^    bool AnyFutureInterrupts() { return !pending->IsEmpty(); }$/;"	f	class:Interrupt
+Append	lib/list.cc	/^List<T>::Append(T item)$/;"	f	class:List
+Append	lib/list.h	/^    void Append(T item) { Insert(item); }   \/\/ neither does *ap*pend $/;"	f	class:SortedList
+Append	threads/synchlist.cc	/^SynchList<T>::Append(T item)$/;"	f	class:SynchList
+Apply	lib/hash.cc	/^HashTable<Key,T>::Apply(void (*func)(T)) const$/;"	f	class:HashTable
+Apply	lib/list.cc	/^List<T>::Apply(void (*func)(T)) const$/;"	f	class:List
+Apply	threads/synchlist.cc	/^SynchList<T>::Apply(void (*func)(T))$/;"	f	class:SynchList
+Array	userprog/addrspace.cc	/^    unsigned*  Array;$/;"	m	class:FreePhysicalPage	file:
+AssignNameToSocket	lib/sysdep.cc	/^AssignNameToSocket(char *socketName, int sockID)$/;"	f
+B	test/matmult.c	/^int B[Dim][Dim];$/;"	v
+BCOND	machine/mipssim.h	106;"	d
+BITMAP_H	lib/bitmap.h	16;"	d
+BLOCKED	threads/thread.h	/^enum ThreadStatus { JUST_CREATED, RUNNING, READY, BLOCKED };$/;"	e	enum:ThreadStatus
+BadVAddrReg	machine/machine.h	68;"	d
+Begin	threads/thread.cc	/^Thread::Begin ()$/;"	f	class:Thread
+BitMap	lib/bitmap.cc	/^BitMap::BitMap(int numItems) $/;"	f	class:BitMap
+BitMap	lib/bitmap.h	/^class BitMap {$/;"	c
+BitsInByte	lib/bitmap.h	/^const int BitsInByte =	8;$/;"	v
+BitsInWord	lib/bitmap.h	/^const int BitsInWord = sizeof(unsigned int) * BitsInByte;$/;"	v
+Broadcast	threads/synch.cc	/^void Condition::Broadcast(Lock* conditionLock) $/;"	f	class:Condition
+Bucket	lib/hash.h	/^typedef List<T> *Bucket;$/;"	t	class:HashTable
+BusErrorException	machine/machine.h	/^		     BusErrorException,     \/\/ Translation resulted in an $/;"	e	enum:ExceptionType
+ByteToSector	filesys/filehdr.cc	/^FileHeader::ByteToSector(int offset)$/;"	f	class:FileHeader
+C	test/matmult.c	/^int C[Dim][Dim];$/;"	v
+CALLBACK_H	machine/callback.h	27;"	d
+CC	bin/Makefile	/^CC=gcc$/;"	m
+CC	test/Makefile	/^CC = $(GCCDIR)gcc$/;"	m
+CFILES	filesys/Makefile	/^CFILES = $(THREAD_C) $(USERPROG_C) $(VM_C) $(FILESYS_C)$/;"	m
+CFILES	network/Makefile	/^CFILES = $(THREAD_C) $(USERPROG_C) $(VM_C) $(FILESYS_C) $(NETWORK_C)$/;"	m
+CFILES	threads/Makefile	/^CFILES = $(THREAD_C)$/;"	m
+CFILES	userprog/Makefile	/^CFILES = $(THREAD_C) $(USERPROG_C)$/;"	m
+CFLAGS	bin/Makefile	/^CFLAGS=-I..\/lib -I..\/threads $(HOST)$/;"	m
+CFLAGS	test/Makefile	/^CFLAGS = -G 0 -c $(INCDIR)$/;"	m
+CONSOLE_H	machine/console.h	28;"	d
+CPP	test/Makefile	/^CPP = \/lib\/cpp$/;"	m
+CPPFLAGS	test/Makefile	/^CPPFLAGS = $(INCDIR)$/;"	m
+CR	threads/switch.h	203;"	d
+C_OFILES	filesys/Makefile	/^C_OFILES = $(THREAD_O) $(USERPROG_O) $(VM_O) $(FILESYS_O)$/;"	m
+C_OFILES	network/Makefile	/^C_OFILES = $(THREAD_O) $(USERPROG_O) $(VM_O) $(FILESYS_O) $(NETWORK_O)$/;"	m
+C_OFILES	threads/Makefile	/^C_OFILES = $(THREAD_O)$/;"	m
+C_OFILES	userprog/Makefile	/^C_OFILES = $(THREAD_O) $(USERPROG_O)$/;"	m
+CallBack	filesys/synchdisk.cc	/^SynchDisk::CallBack()$/;"	f	class:SynchDisk
+CallBack	machine/console.cc	/^ConsoleInput::CallBack()$/;"	f	class:ConsoleInput
+CallBack	machine/console.cc	/^ConsoleOutput::CallBack()$/;"	f	class:ConsoleOutput
+CallBack	machine/disk.cc	/^Disk::CallBack ()$/;"	f	class:Disk
+CallBack	machine/elevator.cc	/^ElevatorBank::CallBack() {$/;"	f	class:ElevatorBank
+CallBack	machine/elevatortest.cc	/^ElevatorInspector::CallBack() {$/;"	f	class:ElevatorInspector
+CallBack	machine/network.cc	/^NetworkInput::CallBack()$/;"	f	class:NetworkInput
+CallBack	machine/network.cc	/^NetworkOutput::CallBack()$/;"	f	class:NetworkOutput
+CallBack	machine/timer.cc	/^Timer::CallBack() $/;"	f	class:Timer
+CallBack	network/post.cc	/^PostOfficeInput::CallBack()$/;"	f	class:PostOfficeInput
+CallBack	network/post.cc	/^PostOfficeOutput::CallBack()$/;"	f	class:PostOfficeOutput
+CallBack	threads/alarm.cc	/^Alarm::CallBack() $/;"	f	class:Alarm
+CallBack	userprog/synchconsole.cc	/^SynchConsoleInput::CallBack()$/;"	f	class:SynchConsoleInput
+CallBack	userprog/synchconsole.cc	/^SynchConsoleOutput::CallBack()$/;"	f	class:SynchConsoleOutput
+CallBackObj	machine/callback.h	/^     CallBackObj() {};	\/\/ to prevent anyone from creating$/;"	f	class:CallBackObj
+CallBackObj	machine/callback.h	/^class CallBackObj {$/;"	c
+CallOnUserAbort	lib/sysdep.cc	/^CallOnUserAbort(void (*func)(int))$/;"	f
+ChangeLevel	machine/interrupt.cc	/^Interrupt::ChangeLevel(IntStatus old, IntStatus now)$/;"	f	class:Interrupt
+CheckArrived	machine/elevator.cc	/^    bool CheckArrived() {	\/\/ has it reached the destination?$/;"	f	class:ElevatorInfo
+CheckEndian	machine/machine.cc	/^void CheckEndian()$/;"	f	file:
+CheckIfDue	machine/interrupt.cc	/^Interrupt::CheckIfDue(bool advanceClock)$/;"	f	class:Interrupt
+CheckOverflow	threads/thread.cc	/^Thread::CheckOverflow()$/;"	f	class:Thread
+CheckToBeDestroyed	threads/scheduler.cc	/^Scheduler::CheckToBeDestroyed()$/;"	f	class:Scheduler
+Cleanup	threads/main.cc	/^Cleanup(int x) $/;"	f	file:
+Clear	lib/bitmap.cc	/^BitMap::Clear(int which) $/;"	f	class:BitMap
+Close	lib/sysdep.cc	/^Close(int fd)$/;"	f
+Close	test/start.s	/^Close:$/;"	l
+CloseDoors	machine/elevator.cc	/^    void CloseDoors() { ASSERT(doorsOpen); doorsOpen = FALSE; }$/;"	f	class:ElevatorInfo
+CloseDoors	machine/elevator.cc	/^ElevatorBank::CloseDoors(int elevator) {$/;"	f	class:ElevatorBank
+CloseSocket	lib/sysdep.cc	/^CloseSocket(int sockID)$/;"	f
+ComputeLatency	machine/disk.cc	/^Disk::ComputeLatency(int newSector, bool writing)$/;"	f	class:Disk
+Condition	threads/synch.cc	/^Condition::Condition(char* debugName)$/;"	f	class:Condition
+Condition	threads/synch.h	/^class Condition {$/;"	c
+ConsoleInput	machine/console.cc	/^ConsoleInput::ConsoleInput(char *readFile, CallBackObj *toCall)$/;"	f	class:ConsoleInput
+ConsoleInput	machine/console.h	/^class ConsoleInput : public CallBackObj {$/;"	c
+ConsoleInput	userprog/syscall.h	88;"	d
+ConsoleOutput	machine/console.cc	/^ConsoleOutput::ConsoleOutput(char *writeFile, CallBackObj *toCall)$/;"	f	class:ConsoleOutput
+ConsoleOutput	machine/console.h	/^class ConsoleOutput : public CallBackObj {$/;"	c
+ConsoleOutput	userprog/syscall.h	89;"	d
+ConsoleReadInt	machine/interrupt.h	/^enum IntType { TimerInt, DiskInt, ConsoleWriteInt, ConsoleReadInt, $/;"	e	enum:IntType
+ConsoleTime	machine/stats.h	/^const int ConsoleTime =	 100;	\/\/ time to read or write one character$/;"	v
+ConsoleWriteInt	machine/interrupt.h	/^enum IntType { TimerInt, DiskInt, ConsoleWriteInt, ConsoleReadInt, $/;"	e	enum:IntType
+ContentSize	filesys/fstest.cc	113;"	d	file:
+Contents	filesys/fstest.cc	112;"	d	file:
+ControllerTest	machine/elevatortest.cc	/^ControllerTest(ElevatorInspector *inspector) {$/;"	f	file:
+ControllerTest	machine/elevatortest.cc	/^ElevatorInspector::ControllerTest () {$/;"	f	class:ElevatorInspector
+Copy	filesys/fstest.cc	/^Copy(char *from, char *to)$/;"	f
+Create	filesys/filesys.cc	/^FileSystem::Create(char *name, int initialSize)$/;"	f	class:FileSystem
+Create	filesys/filesys.h	/^    bool Create(char *name) { $/;"	f	class:FileSystem
+Create	test/start.s	/^Create:$/;"	l
+DEBUG	lib/debug.h	49;"	d
+DEBUG_H	lib/debug.h	14;"	d
+DEFINES	filesys/Makefile	/^DEFINES =-DUSER_PROGRAM -DFILESYS_NEEDED -DFILESYS -DVM -DUSE_TLB$/;"	m
+DEFINES	network/Makefile	/^DEFINES = -DTHREADS -DUSER_PROGRAM -DFILESYS_NEEDED -DFILESYS -DNETWORK$/;"	m
+DEFINES	threads/Makefile	/^DEFINES = -DTHREADS$/;"	m
+DEFINES	userprog/Makefile	/^DEFINES = -DTHREADS -DUSER_PROGRAM -DFILESYS_NEEDED -DFILESYS_STUB$/;"	m
+DIRECTORY_H	filesys/directory.h	18;"	d
+DISK_H	machine/disk.h	18;"	d
+DeAssignNameToSocket	lib/sysdep.cc	/^DeAssignNameToSocket(char *socketName)$/;"	f
+DeallocBoundedArray	lib/sysdep.cc	/^DeallocBoundedArray(char *ptr, int size)$/;"	f
+Deallocate	filesys/filehdr.cc	/^FileHeader::Deallocate(BitMap *freeMap)$/;"	f	class:FileHeader
+Debug	lib/debug.cc	/^Debug::Debug(char *flagList)$/;"	f	class:Debug
+Debug	lib/debug.h	/^class Debug {$/;"	c
+Debugger	machine/machine.cc	/^void Machine::Debugger()$/;"	f	class:Machine
+Decode	machine/mipssim.cc	/^Instruction::Decode()$/;"	f	class:Instruction
+Delay	lib/sysdep.cc	/^Delay(int seconds)$/;"	f
+DelayPerFloor	machine/elevator.h	/^const int DelayPerFloor = 100;	\/\/ how long does an elevator take$/;"	v
+DelayedLoad	machine/mipssim.cc	/^Machine::DelayedLoad(int nextReg, int nextValue)$/;"	f	class:Machine
+DeleteBuckets	lib/hash.cc	/^HashTable<Key,T>::DeleteBuckets(List<T> **table, int sz)$/;"	f	class:HashTable
+Dim	test/matmult.c	12;"	d	file:
+Direction	machine/elevator.h	/^enum Direction { Down, Up, Neither};$/;"	g
+Directory	filesys/directory.cc	/^Directory::Directory(int size)$/;"	f	class:Directory
+Directory	filesys/directory.h	/^class Directory {$/;"	c
+DirectoryEntry	filesys/directory.h	/^class DirectoryEntry {$/;"	c
+DirectoryFileSize	filesys/filesys.cc	67;"	d	file:
+DirectorySector	filesys/filesys.cc	60;"	d	file:
+Disable	machine/timer.h	/^    void Disable() { disable = TRUE; }$/;"	f	class:Timer
+Disk	machine/disk.cc	/^Disk::Disk(char* name, CallBackObj *toCall)$/;"	f	class:Disk
+Disk	machine/disk.h	/^class Disk : public CallBackObj {$/;"	c
+DiskInt	machine/interrupt.h	/^enum IntType { TimerInt, DiskInt, ConsoleWriteInt, ConsoleReadInt, $/;"	e	enum:IntType
+DiskSize	machine/disk.cc	/^const int DiskSize = (MagicSize + (NumSectors * SectorSize));$/;"	v
+DoorsOpened	machine/elevator.h	/^enum ElevatorEvent { NoEvent, DoorsOpened, UpButtonPressed, $/;"	e	enum:ElevatorEvent
+Down	machine/elevator.h	/^enum Direction { Down, Up, Neither};$/;"	e	enum:Direction
+DownButtonPressed	machine/elevator.h	/^	DownButtonPressed, FloorButtonPressed, ElevatorArrived};$/;"	e	enum:ElevatorEvent
+DumpState	machine/interrupt.cc	/^Interrupt::DumpState()$/;"	f	class:Interrupt
+DumpState	machine/machine.cc	/^Machine::DumpState()$/;"	f	class:Machine
+ELEVATORTEST_H	machine/elevatortest.h	9;"	d
+ELEVATOR_H	machine/elevator.h	19;"	d
+EXTRA	machine/mipssim.h	/^enum RegType { NONE, RS, RT, RD, EXTRA }; $/;"	e	enum:RegType
+ElevatorArrived	machine/elevator.h	/^	DownButtonPressed, FloorButtonPressed, ElevatorArrived};$/;"	e	enum:ElevatorEvent
+ElevatorBank	machine/elevator.cc	/^ElevatorBank::ElevatorBank(int numElvtr, int numFlr, $/;"	f	class:ElevatorBank
+ElevatorBank	machine/elevator.h	/^class ElevatorBank : public CallBackObj {$/;"	c
+ElevatorEvent	machine/elevator.h	/^enum ElevatorEvent { NoEvent, DoorsOpened, UpButtonPressed, $/;"	g
+ElevatorInfo	machine/elevator.cc	/^    ElevatorInfo() { 		\/\/ initialize elevator state$/;"	f	class:ElevatorInfo
+ElevatorInfo	machine/elevator.cc	/^class ElevatorInfo {$/;"	c	file:
+ElevatorInspector	machine/elevatortest.cc	/^ElevatorInspector::ElevatorInspector()$/;"	f	class:ElevatorInspector
+ElevatorInspector	machine/elevatortest.cc	/^class ElevatorInspector : public CallBackObj{$/;"	c	file:
+ElevatorInt	machine/interrupt.h	/^			ElevatorInt, NetworkSendInt, NetworkRecvInt};$/;"	e	enum:IntType
+ElevatorSelfTest	machine/elevatortest.cc	/^ElevatorSelfTest () {$/;"	f
+Enable	machine/interrupt.h	/^    void Enable() { (void) SetLevel(IntOn); }$/;"	f	class:Interrupt
+Enter	machine/elevator.cc	/^    bool Enter(int onFloor) { \/\/ rider enters the elevator$/;"	f	class:ElevatorInfo
+EnterElevator	machine/elevator.cc	/^ElevatorBank::EnterElevator(int onFloor, int elevator)$/;"	f	class:ElevatorBank
+ExceptionHandler	userprog/exception.cc	/^ExceptionHandler(ExceptionType which)$/;"	f
+ExceptionType	machine/machine.h	/^enum ExceptionType { NoException,           \/\/ Everything ok!$/;"	g
+Exec	test/start.s	/^Exec:$/;"	l
+Execute	userprog/addrspace.cc	/^AddrSpace::Execute(char *fileName) $/;"	f	class:AddrSpace
+Exit	lib/sysdep.cc	/^Exit(int exitCode)$/;"	f
+Exit	machine/elevator.cc	/^    bool Exit(int onFloor) {	\/\/ rider leaves the elevator$/;"	f	class:ElevatorInfo
+Exit	test/start.s	/^Exit:$/;"	l
+ExitElevator	machine/elevator.cc	/^ElevatorBank::ExitElevator(int onFloor, int elevator)$/;"	f	class:ElevatorBank
+FALSE	lib/utility.h	17;"	d
+FAST	bin/execute.c	14;"	d	file:
+FILEHDR_H	filesys/filehdr.h	15;"	d
+FP	threads/switch.h	38;"	d
+FP	threads/switch.h	78;"	d
+FP13	threads/switch.h	185;"	d
+FP15	threads/switch.h	186;"	d
+FP16	threads/switch.h	187;"	d
+FP17	threads/switch.h	188;"	d
+FP18	threads/switch.h	189;"	d
+FP19	threads/switch.h	190;"	d
+FP20	threads/switch.h	191;"	d
+FP21	threads/switch.h	192;"	d
+FP22	threads/switch.h	193;"	d
+FP23	threads/switch.h	194;"	d
+FP24	threads/switch.h	195;"	d
+FP25	threads/switch.h	196;"	d
+FP26	threads/switch.h	197;"	d
+FP27	threads/switch.h	198;"	d
+FP28	threads/switch.h	199;"	d
+FP29	threads/switch.h	200;"	d
+FP30	threads/switch.h	201;"	d
+FP31	threads/switch.h	202;"	d
+FPState	threads/switch.h	146;"	d
+FPState	threads/switch.h	260;"	d
+FPState	threads/switch.h	57;"	d
+FS_H	filesys/filesys.h	36;"	d
+FetchFrom	filesys/directory.cc	/^Directory::FetchFrom(OpenFile *file)$/;"	f	class:Directory
+FetchFrom	filesys/filehdr.cc	/^FileHeader::FetchFrom(int sector)$/;"	f	class:FileHeader
+FetchFrom	filesys/pbitmap.cc	/^PersistBitMap::FetchFrom(OpenFile *file) $/;"	f	class:PersistBitMap
+FileHeader	filesys/filehdr.h	/^class FileHeader {$/;"	c
+FileLength	filesys/filehdr.cc	/^FileHeader::FileLength()$/;"	f	class:FileHeader
+FileName	filesys/fstest.cc	111;"	d	file:
+FileNameMaxLen	filesys/directory.h	22;"	d
+FileRead	filesys/fstest.cc	/^FileRead()$/;"	f	file:
+FileSize	filesys/fstest.cc	114;"	d	file:
+FileSystem	filesys/filesys.cc	/^FileSystem::FileSystem(bool format)$/;"	f	class:FileSystem
+FileSystem	filesys/filesys.h	/^    FileSystem(bool format=true) {}$/;"	f	class:FileSystem
+FileSystem	filesys/filesys.h	/^class FileSystem {$/;"	c
+FileWrite	filesys/fstest.cc	/^FileWrite()$/;"	f	file:
+Find	filesys/directory.cc	/^Directory::Find(char *name)$/;"	f	class:Directory
+Find	lib/hash.cc	/^HashTable<Key,T>::Find(Key key, T *itemPtr) const$/;"	f	class:HashTable
+FindAndSet	lib/bitmap.cc	/^BitMap::FindAndSet() $/;"	f	class:BitMap
+FindInBucket	lib/hash.cc	/^HashTable<Key,T>::FindInBucket(int bucket, $/;"	f	class:HashTable
+FindIndex	filesys/directory.cc	/^Directory::FindIndex(char *name)$/;"	f	class:Directory
+FindNextFullBucket	lib/hash.cc	/^HashTable<Key,T>::FindNextFullBucket(int bucket) const$/;"	f	class:HashTable
+FindNextToRun	threads/scheduler.cc	/^Scheduler::FindNextToRun ()$/;"	f	class:Scheduler
+Finish	threads/thread.cc	/^Thread::Finish ()$/;"	f	class:Thread
+FloorButtonPressed	machine/elevator.h	/^	DownButtonPressed, FloorButtonPressed, ElevatorArrived};$/;"	e	enum:ElevatorEvent
+Fork	threads/thread.cc	/^Thread::Fork(VoidFunctionPtr func, void *arg)$/;"	f	class:Thread
+ForkExecute	userprog/userkernel.cc	/^ForkExecute(Thread *t)$/;"	f
+FreeMapFileSize	filesys/filesys.cc	65;"	d	file:
+FreeMapSector	filesys/filesys.cc	59;"	d	file:
+FreePhysicalPage	userprog/addrspace.cc	/^    FreePhysicalPage()$/;"	f	class:FreePhysicalPage
+FreePhysicalPage	userprog/addrspace.cc	/^class FreePhysicalPage \/\/not that powerful, but enough in this homework$/;"	c	file:
+Front	lib/list.h	/^    T Front() { return first->item; }$/;"	f	class:List
+GCCDIR	test/Makefile	/^GCCDIR = \/usr\/local\/nachos\/decstation-ultrix\/bin\/$/;"	m
+GP	threads/switch.h	242;"	d
+GP13	threads/switch.h	166;"	d
+GP14	threads/switch.h	167;"	d
+GP15	threads/switch.h	168;"	d
+GP16	threads/switch.h	169;"	d
+GP17	threads/switch.h	170;"	d
+GP18	threads/switch.h	171;"	d
+GP19	threads/switch.h	172;"	d
+GP20	threads/switch.h	173;"	d
+GP21	threads/switch.h	174;"	d
+GP22	threads/switch.h	175;"	d
+GP23	threads/switch.h	176;"	d
+GP24	threads/switch.h	177;"	d
+GP25	threads/switch.h	178;"	d
+GP26	threads/switch.h	179;"	d
+GP27	threads/switch.h	180;"	d
+GP28	threads/switch.h	181;"	d
+GP29	threads/switch.h	182;"	d
+GP30	threads/switch.h	183;"	d
+GP31	threads/switch.h	184;"	d
+Get	network/post.cc	/^MailBox::Get(PacketHeader *pktHdr, MailHeader *mailHdr, char *data) $/;"	f	class:MailBox
+GetChar	machine/console.cc	/^ConsoleInput::GetChar()$/;"	f	class:ConsoleInput
+GetChar	userprog/synchconsole.cc	/^SynchConsoleInput::GetChar()$/;"	f	class:SynchConsoleInput
+HASH_H	lib/hash.h	30;"	d
+HFILES	filesys/Makefile	/^HFILES = $(THREAD_H) $(USERPROG_H) $(VM_H) $(FILESYS_H)$/;"	m
+HFILES	network/Makefile	/^HFILES = $(THREAD_H) $(USERPROG_H) $(VM_H) $(FILESYS_H) $(NETWORK_H)$/;"	m
+HFILES	threads/Makefile	/^HFILES = $(THREAD_H)$/;"	m
+HFILES	userprog/Makefile	/^HFILES = $(THREAD_H) $(USERPROG_H)$/;"	m
+HI	bin/execute.c	/^int HI, LO;			\/* mul\/div machine registers *\/$/;"	v
+Halt	machine/interrupt.cc	/^Interrupt::Halt()$/;"	f	class:Interrupt
+Halt	test/start.s	/^Halt:$/;"	l
+HashInt	lib/libtest.cc	/^HashInt(int key) {$/;"	f	file:
+HashIterator	lib/hash.cc	/^HashIterator<Key,T>::HashIterator(HashTable<Key,T> *tbl) $/;"	f	class:HashIterator
+HashIterator	lib/hash.h	/^class HashIterator {$/;"	c
+HashKey	lib/libtest.cc	/^HashKey(char *str) {$/;"	f	file:
+HashTable	lib/hash.cc	/^HashTable<Key,T>::HashTable(Key (*get)(T x), unsigned (*hFunc)(Key x))$/;"	f	class:HashTable
+HashTable	lib/hash.h	/^class HashTable {$/;"	c
+HashValue	lib/hash.cc	/^HashTable<Key, T>::HashValue(Key key) const $/;"	f	class:HashTable
+HiReg	machine/machine.h	61;"	d
+I0	threads/switch.h	68;"	d
+I1	threads/switch.h	69;"	d
+I2	threads/switch.h	70;"	d
+I3	threads/switch.h	71;"	d
+I4	threads/switch.h	72;"	d
+I5	threads/switch.h	73;"	d
+I6	threads/switch.h	74;"	d
+I7	threads/switch.h	75;"	d
+IFMT	machine/mipssim.h	108;"	d
+IM	bin/execute.c	/^IM(i)$/;"	f
+INCDIR	test/Makefile	/^INCDIR =-I..\/userprog -I..\/threads -I..\/lib$/;"	m
+INCPATH	filesys/Makefile	/^INCPATH = -I..\/filesys -I..\/bin -I..\/vm -I..\/userprog -I..\/threads -I..\/machine -I..\/lib$/;"	m
+INCPATH	network/Makefile	/^INCPATH = -I..\/network -I..\/bin -I..\/filesys -I..\/userprog -I..\/threads -I..\/machine -I..\/lib$/;"	m
+INCPATH	threads/Makefile	/^INCPATH = -I..\/lib -I..\/threads -I..\/machine$/;"	m
+INCPATH	userprog/Makefile	/^INCPATH = -I..\/bin -I..\/filesys -I..\/userprog -I..\/threads -I..\/machine -I..\/lib$/;"	m
+INTERRUPT_H	machine/interrupt.h	36;"	d
+IN_ASM	test/start.s	/^#define IN_ASM$/;"	d
+IOCPARM_MASK	bin/system.c	89;"	d	file:
+I_ADD	bin/encode.h	84;"	d
+I_ADDI	bin/encode.h	20;"	d
+I_ADDIU	bin/encode.h	21;"	d
+I_ADDU	bin/encode.h	85;"	d
+I_AND	bin/encode.h	88;"	d
+I_ANDI	bin/encode.h	24;"	d
+I_BCOND	bin/encode.h	13;"	d
+I_BEQ	bin/encode.h	16;"	d
+I_BGEZ	bin/encode.h	100;"	d
+I_BGEZAL	bin/encode.h	103;"	d
+I_BGTZ	bin/encode.h	19;"	d
+I_BLEZ	bin/encode.h	18;"	d
+I_BLTZ	bin/encode.h	99;"	d
+I_BLTZAL	bin/encode.h	102;"	d
+I_BNE	bin/encode.h	17;"	d
+I_BREAK	bin/encode.h	72;"	d
+I_COP0	bin/encode.h	28;"	d
+I_COP1	bin/encode.h	29;"	d
+I_COP2	bin/encode.h	30;"	d
+I_COP3	bin/encode.h	31;"	d
+I_DIV	bin/encode.h	81;"	d
+I_DIVU	bin/encode.h	82;"	d
+I_J	bin/encode.h	14;"	d
+I_JAL	bin/encode.h	15;"	d
+I_JALR	bin/encode.h	69;"	d
+I_JR	bin/encode.h	68;"	d
+I_LB	bin/encode.h	33;"	d
+I_LBU	bin/encode.h	37;"	d
+I_LH	bin/encode.h	34;"	d
+I_LHU	bin/encode.h	38;"	d
+I_LUI	bin/encode.h	27;"	d
+I_LW	bin/encode.h	36;"	d
+I_LWC0	bin/encode.h	48;"	d
+I_LWC1	bin/encode.h	49;"	d
+I_LWC2	bin/encode.h	50;"	d
+I_LWC3	bin/encode.h	51;"	d
+I_LWL	bin/encode.h	35;"	d
+I_LWR	bin/encode.h	39;"	d
+I_MFHI	bin/encode.h	74;"	d
+I_MFLO	bin/encode.h	76;"	d
+I_MTHI	bin/encode.h	75;"	d
+I_MTLO	bin/encode.h	77;"	d
+I_MULT	bin/encode.h	79;"	d
+I_MULTU	bin/encode.h	80;"	d
+I_NOP	bin/encode.h	107;"	d
+I_NOR	bin/encode.h	91;"	d
+I_OR	bin/encode.h	89;"	d
+I_ORI	bin/encode.h	25;"	d
+I_SB	bin/encode.h	41;"	d
+I_SH	bin/encode.h	42;"	d
+I_SLL	bin/encode.h	60;"	d
+I_SLLV	bin/encode.h	64;"	d
+I_SLT	bin/encode.h	93;"	d
+I_SLTI	bin/encode.h	22;"	d
+I_SLTIU	bin/encode.h	23;"	d
+I_SLTU	bin/encode.h	94;"	d
+I_SPECIAL	bin/encode.h	12;"	d
+I_SRA	bin/encode.h	63;"	d
+I_SRAV	bin/encode.h	67;"	d
+I_SRL	bin/encode.h	62;"	d
+I_SRLV	bin/encode.h	66;"	d
+I_SUB	bin/encode.h	86;"	d
+I_SUBU	bin/encode.h	87;"	d
+I_SW	bin/encode.h	44;"	d
+I_SWC0	bin/encode.h	53;"	d
+I_SWC1	bin/encode.h	54;"	d
+I_SWC2	bin/encode.h	55;"	d
+I_SWC3	bin/encode.h	56;"	d
+I_SWL	bin/encode.h	43;"	d
+I_SWR	bin/encode.h	46;"	d
+I_SYSCALL	bin/encode.h	71;"	d
+I_XOR	bin/encode.h	90;"	d
+I_XORI	bin/encode.h	26;"	d
+Idle	machine/interrupt.cc	/^Interrupt::Idle()$/;"	f	class:Interrupt
+IdleMode	machine/interrupt.h	/^enum MachineStatus {IdleMode, SystemMode, UserMode};$/;"	e	enum:MachineStatus
+IllegalInstrException	machine/machine.h	/^		     IllegalInstrException, \/\/ Unimplemented or reserved instr.$/;"	e	enum:ExceptionType
+IncreaseSizeBy	lib/hash.cc	/^const int IncreaseSizeBy = 4;	\/\/ how much do we grow table when needed?$/;"	v
+IndexToAddr	machine/mipssim.h	94;"	d
+InitBuckets	lib/hash.cc	/^HashTable<Key,T>::InitBuckets(int sz)$/;"	f	class:HashTable
+InitRegisters	userprog/addrspace.cc	/^AddrSpace::InitRegisters()$/;"	f	class:AddrSpace
+InitSocketName	lib/sysdep.cc	/^InitSocketName(struct sockaddr_un *uname, char *name)$/;"	f	file:
+InitialArg	threads/switch.h	119;"	d
+InitialArg	threads/switch.h	153;"	d
+InitialArg	threads/switch.h	219;"	d
+InitialArg	threads/switch.h	255;"	d
+InitialArg	threads/switch.h	52;"	d
+InitialArg	threads/switch.h	83;"	d
+InitialArgState	threads/switch.h	125;"	d
+InitialArgState	threads/switch.h	148;"	d
+InitialArgState	threads/switch.h	211;"	d
+InitialArgState	threads/switch.h	262;"	d
+InitialArgState	threads/switch.h	59;"	d
+InitialArgState	threads/switch.h	89;"	d
+InitialBuckets	lib/hash.cc	/^const int InitialBuckets = 4;	\/\/ how big a hash table do we start with$/;"	v
+InitialLR	threads/switch.h	218;"	d
+InitialPC	threads/switch.h	118;"	d
+InitialPC	threads/switch.h	152;"	d
+InitialPC	threads/switch.h	254;"	d
+InitialPC	threads/switch.h	51;"	d
+InitialPC	threads/switch.h	82;"	d
+InitialPCState	threads/switch.h	124;"	d
+InitialPCState	threads/switch.h	147;"	d
+InitialPCState	threads/switch.h	210;"	d
+InitialPCState	threads/switch.h	261;"	d
+InitialPCState	threads/switch.h	58;"	d
+InitialPCState	threads/switch.h	88;"	d
+Initialize	network/netkernel.cc	/^NetKernel::Initialize()$/;"	f	class:NetKernel
+Initialize	threads/kernel.cc	/^ThreadedKernel::Initialize()$/;"	f	class:ThreadedKernel
+Initialize	userprog/userkernel.cc	/^UserProgKernel::Initialize()$/;"	f	class:UserProgKernel
+Insert	lib/hash.cc	/^HashTable<Key,T>::Insert(T item)$/;"	f	class:HashTable
+Insert	lib/list.cc	/^SortedList<T>::Insert(T item)$/;"	f	class:SortedList
+Instruction	machine/mipssim.cc	/^class Instruction {$/;"	c	file:
+IntCompare	lib/libtest.cc	/^IntCompare(int x, int y) {$/;"	f	file:
+IntOff	machine/interrupt.h	/^enum IntStatus { IntOff, IntOn };$/;"	e	enum:IntStatus
+IntOn	machine/interrupt.h	/^enum IntStatus { IntOff, IntOn };$/;"	e	enum:IntStatus
+IntStatus	machine/interrupt.h	/^enum IntStatus { IntOff, IntOn };$/;"	g
+IntType	machine/interrupt.h	/^enum IntType { TimerInt, DiskInt, ConsoleWriteInt, ConsoleReadInt, $/;"	g
+Interrupt	machine/interrupt.cc	/^Interrupt::Interrupt()$/;"	f	class:Interrupt
+Interrupt	machine/interrupt.h	/^class Interrupt {$/;"	c
+IsDone	lib/hash.h	/^    bool IsDone() { return (bucket == table->numBuckets); };$/;"	f	class:HashIterator
+IsDone	lib/list.h	/^    bool IsDone() { return current == NULL; };$/;"	f	class:ListIterator
+IsEmpty	lib/hash.h	/^    bool IsEmpty() { return numItems == 0; }	$/;"	f	class:HashTable
+IsEmpty	lib/list.h	/^    bool IsEmpty() { return (numInList == 0); };$/;"	f	class:List
+IsEnabled	lib/debug.cc	/^Debug::IsEnabled(char flag)$/;"	f	class:Debug
+IsHeldByCurrentThread	threads/synch.cc	/^Lock::IsHeldByCurrentThread()$/;"	f	class:Lock
+IsInList	lib/list.cc	/^List<T>::IsInList(T item) const$/;"	f	class:List
+IsInTable	lib/hash.h	/^    bool IsInTable(Key key) { T dummy; return Find(key, &dummy); } 	$/;"	f	class:HashTable
+Item	lib/hash.h	/^    T Item() { ASSERT(!IsDone()); return bucketIter->Item(); }; $/;"	f	class:HashIterator
+Item	lib/list.h	/^    T Item() { ASSERT(!IsDone()); return current->item; };$/;"	f	class:ListIterator
+JFMT	machine/mipssim.h	109;"	d
+JUST_CREATED	threads/thread.h	/^enum ThreadStatus { JUST_CREATED, RUNNING, READY, BLOCKED };$/;"	e	enum:ThreadStatus
+Join	test/start.s	/^Join:$/;"	l
+KERNEL_H	threads/kernel.h	9;"	d
+KernelType	threads/main.h	17;"	d
+KernelType	threads/main.h	22;"	d
+KernelType	threads/main.h	26;"	d
+LD	bin/Makefile	/^LD=gcc$/;"	m
+LD	test/Makefile	/^LD = $(GCCDIR)ld$/;"	m
+LDFLAGS	test/Makefile	/^LDFLAGS = -T script -N$/;"	m
+LIBTEST_H	lib/libtest.h	9;"	d
+LINESIZE	bin/disasm.c	/^int NROWS=64, ASSOC=1, LINESIZE=4, RAND=0, LRD=0;$/;"	v
+LINESIZE	bin/main.c	/^int NROWS=64, ASSOC=1, LINESIZE=4, RAND=0, LRD=0;$/;"	v
+LIST_H	lib/list.h	14;"	d
+LO	bin/execute.c	/^int HI, LO;			\/* mul\/div machine registers *\/$/;"	v
+LOADSECTION	bin/disasm.c	69;"	d	file:
+LOADSECTION	bin/main.c	112;"	d	file:
+LPR	Makefile	/^LPR = lpr$/;"	m
+LR	threads/switch.h	204;"	d
+LRD	bin/disasm.c	/^int NROWS=64, ASSOC=1, LINESIZE=4, RAND=0, LRD=0;$/;"	v
+LRD	bin/main.c	/^int NROWS=64, ASSOC=1, LINESIZE=4, RAND=0, LRD=0;$/;"	v
+Length	filesys/openfile.cc	/^OpenFile::Length() $/;"	f	class:OpenFile
+Length	filesys/openfile.h	/^    int Length() { Lseek(file, 0, 2); return Tell(file); }$/;"	f	class:OpenFile
+LibSelfTest	lib/libtest.cc	/^LibSelfTest () {$/;"	f
+List	filesys/directory.cc	/^Directory::List()$/;"	f	class:Directory
+List	filesys/filesys.cc	/^FileSystem::List()$/;"	f	class:FileSystem
+List	lib/list.cc	/^List<T>::List()$/;"	f	class:List
+List	lib/list.h	/^class List {$/;"	c
+ListElement	lib/list.cc	/^ListElement<T>::ListElement(T itm)$/;"	f	class:ListElement
+ListElement	lib/list.h	/^class ListElement {$/;"	c
+ListIterator	lib/list.h	/^    ListIterator(List<T> *list) { current = list->first; } $/;"	f	class:ListIterator
+ListIterator	lib/list.h	/^class ListIterator {$/;"	c
+ListOfEvents	machine/elevator.h	/^typedef List<PendingElevatorEvent *> ListOfEvents;$/;"	t
+LoReg	machine/machine.h	62;"	d
+Load	userprog/addrspace.cc	/^AddrSpace::Load(char *fileName) $/;"	f	class:AddrSpace
+LoadReg	machine/machine.h	66;"	d
+LoadValueReg	machine/machine.h	67;"	d
+Lock	threads/synch.cc	/^Lock::Lock(char* debugName)$/;"	f	class:Lock
+Lock	threads/synch.h	/^class Lock {$/;"	c
+Lseek	lib/sysdep.cc	/^Lseek(int fd, int offset, int whence)$/;"	f
+MACHINE_H	machine/machine.h	22;"	d
+MAIN	bin/coff2flat.c	15;"	d	file:
+MAIN	bin/coff2flat.c	17;"	d	file:
+MAIN	bin/coff2noff.c	23;"	d	file:
+MAIN	bin/coff2noff.c	25;"	d	file:
+MAIN	bin/out.c	7;"	d	file:
+MAIN	bin/out.c	9;"	d	file:
+MAIN	threads/main.cc	17;"	d	file:
+MAIN	threads/main.cc	19;"	d	file:
+MAIN_H	threads/main.h	10;"	d
+MAKE	Makefile	/^MAKE = make$/;"	m
+MAXDATA	bin/out.c	34;"	d	file:
+MAXRELOCS	bin/out.c	31;"	d	file:
+MAXSCNS	bin/out.c	43;"	d	file:
+MAXSSPACE	bin/out.c	45;"	d	file:
+MAXSYMS	bin/out.c	44;"	d	file:
+MEMSIZE	bin/int.h	11;"	d
+MIPSELMAGIC	bin/coff.h	15;"	d
+MIPSSIM_H	machine/mipssim.h	11;"	d
+Machine	machine/machine.cc	/^Machine::Machine(bool debug)$/;"	f	class:Machine
+Machine	machine/machine.h	/^class Machine {$/;"	c
+MachineStateSize	threads/thread.h	56;"	d
+MachineStatus	machine/interrupt.h	/^enum MachineStatus {IdleMode, SystemMode, UserMode};$/;"	g
+MagicNumber	machine/disk.cc	/^const int MagicNumber = 0x456789ab;$/;"	v
+MagicSize	machine/disk.cc	/^const int MagicSize = sizeof(int);$/;"	v
+Mail	network/post.cc	/^Mail::Mail(PacketHeader pktH, MailHeader mailH, char *msgData)$/;"	f	class:Mail
+Mail	network/post.h	/^class Mail {$/;"	c
+MailBox	network/post.cc	/^MailBox::MailBox()$/;"	f	class:MailBox
+MailBox	network/post.h	/^class MailBox {$/;"	c
+MailBoxAddress	network/post.h	/^typedef int MailBoxAddress;$/;"	t
+MailHeader	network/post.h	/^class MailHeader {$/;"	c
+Mark	lib/bitmap.cc	/^BitMap::Mark(int which) $/;"	f	class:BitMap
+MarkDirection	machine/elevator.cc	/^ElevatorBank::MarkDirection(int elevator, Direction dir)$/;"	f	class:ElevatorBank
+MaxFileSize	filesys/filehdr.h	21;"	d
+MaxMailSize	network/post.h	55;"	d
+MaxOpcode	machine/mipssim.h	88;"	d
+MaxPacketSize	machine/network.h	42;"	d
+MaxRiders	machine/elevator.h	/^const int MaxRiders = 4;	\/\/ carrying capacity of each elevator$/;"	v
+MaxWireSize	machine/network.h	41;"	d
+MemorySize	machine/machine.h	/^const int MemorySize = (NumPhysPages * PageSize);$/;"	v
+ModuloDiff	machine/disk.cc	/^Disk::ModuloDiff(int to, int from)$/;"	f	class:Disk
+MoveTo	machine/elevator.cc	/^    bool MoveTo(int goingToFloor) {$/;"	f	class:ElevatorInfo
+MoveTo	machine/elevator.cc	/^ElevatorBank::MoveTo(int goingToFloor, int elevator)$/;"	f	class:ElevatorBank
+Mult	machine/mipssim.cc	/^Mult(int a, int b, bool signedArith, int* hiPtr, int* loPtr)$/;"	f	file:
+NETKERNEL_H	network/netkernel.h	13;"	d
+NETWORK_H	machine/network.h	16;"	d
+NH	bin/execute.c	465;"	d	file:
+NNN	bin/execute.c	466;"	d	file:
+NNNN	bin/execute.c	555;"	d	file:
+NOFFMAGIC	bin/noff.h	8;"	d
+NONE	machine/mipssim.h	/^enum RegType { NONE, RS, RT, RD, EXTRA }; $/;"	e	enum:RegType
+NO_MPROT	lib/sysdep.cc	37;"	d	file:
+NO_MPROT	lib/sysdep.cc	40;"	d	file:
+NROWS	bin/disasm.c	/^int NROWS=64, ASSOC=1, LINESIZE=4, RAND=0, LRD=0;$/;"	v
+NROWS	bin/main.c	/^int NROWS=64, ASSOC=1, LINESIZE=4, RAND=0, LRD=0;$/;"	v
+NULL	bin/d.c	11;"	d	file:
+NULL	lib/utility.h	15;"	d
+Neither	machine/elevator.h	/^enum Direction { Down, Up, Neither};$/;"	e	enum:Direction
+NetKernel	network/netkernel.cc	/^NetKernel::NetKernel(int argc, char **argv) : UserProgKernel(argc, argv)$/;"	f	class:NetKernel
+NetKernel	network/netkernel.h	/^class NetKernel : public UserProgKernel {$/;"	c
+NetworkAddress	machine/network.h	/^typedef int NetworkAddress;	 $/;"	t
+NetworkInput	machine/network.cc	/^NetworkInput::NetworkInput(CallBackObj *toCall)$/;"	f	class:NetworkInput
+NetworkInput	machine/network.h	/^class NetworkInput : public CallBackObj{$/;"	c
+NetworkOutput	machine/network.cc	/^NetworkOutput::NetworkOutput(double reliability, CallBackObj *toCall)$/;"	f	class:NetworkOutput
+NetworkOutput	machine/network.h	/^class NetworkOutput : public CallBackObj {$/;"	c
+NetworkRecvInt	machine/interrupt.h	/^			ElevatorInt, NetworkSendInt, NetworkRecvInt};$/;"	e	enum:IntType
+NetworkSendInt	machine/interrupt.h	/^			ElevatorInt, NetworkSendInt, NetworkRecvInt};$/;"	e	enum:IntType
+NetworkTime	machine/stats.h	/^const int NetworkTime =	 100;  	\/\/ time to send or receive one packet$/;"	v
+Next	lib/hash.cc	/^HashIterator<Key,T>::Next() $/;"	f	class:HashIterator
+Next	lib/list.h	/^    void Next() { current = current->next; };		$/;"	f	class:ListIterator
+NextPCReg	machine/machine.h	64;"	d
+NoEvent	machine/elevator.h	/^enum ElevatorEvent { NoEvent, DoorsOpened, UpButtonPressed, $/;"	e	enum:ElevatorEvent
+NoException	machine/machine.h	/^enum ExceptionType { NoException,           \/\/ Everything ok!$/;"	e	enum:ExceptionType
+NoffHeader	bin/noff.h	/^} NoffHeader;$/;"	t	typeref:struct:noffHeader
+NumClear	lib/bitmap.cc	/^BitMap::NumClear() const$/;"	f	class:BitMap
+NumDirEntries	filesys/filesys.cc	66;"	d	file:
+NumDirect	filesys/filehdr.h	20;"	d
+NumExceptionTypes	machine/machine.h	/^		     NumExceptionTypes$/;"	e	enum:ExceptionType
+NumGPRegs	machine/machine.h	60;"	d
+NumInList	lib/list.h	/^    unsigned int NumInList() { return numInList;};$/;"	f	class:List
+NumPhysPages	machine/machine.h	/^const unsigned int NumPhysPages = 32;$/;"	v
+NumSectors	machine/disk.h	/^const int NumSectors = (SectorsPerTrack * NumTracks);$/;"	v
+NumTotalRegs	machine/machine.h	70;"	d
+NumTracks	machine/disk.h	/^const int NumTracks = 32;		\/\/ number of tracks per disk$/;"	v
+OMAGIC	bin/coff.h	17;"	d
+OPENFILE_H	filesys/openfile.h	21;"	d
+OP_ADD	machine/mipssim.h	25;"	d
+OP_ADDI	machine/mipssim.h	26;"	d
+OP_ADDIU	machine/mipssim.h	27;"	d
+OP_ADDU	machine/mipssim.h	28;"	d
+OP_AND	machine/mipssim.h	29;"	d
+OP_ANDI	machine/mipssim.h	30;"	d
+OP_BEQ	machine/mipssim.h	31;"	d
+OP_BGEZ	machine/mipssim.h	32;"	d
+OP_BGEZAL	machine/mipssim.h	33;"	d
+OP_BGTZ	machine/mipssim.h	34;"	d
+OP_BLEZ	machine/mipssim.h	35;"	d
+OP_BLTZ	machine/mipssim.h	36;"	d
+OP_BLTZAL	machine/mipssim.h	37;"	d
+OP_BNE	machine/mipssim.h	38;"	d
+OP_DIV	machine/mipssim.h	40;"	d
+OP_DIVU	machine/mipssim.h	41;"	d
+OP_J	machine/mipssim.h	42;"	d
+OP_JAL	machine/mipssim.h	43;"	d
+OP_JALR	machine/mipssim.h	44;"	d
+OP_JR	machine/mipssim.h	45;"	d
+OP_LB	machine/mipssim.h	46;"	d
+OP_LBU	machine/mipssim.h	47;"	d
+OP_LH	machine/mipssim.h	48;"	d
+OP_LHU	machine/mipssim.h	49;"	d
+OP_LUI	machine/mipssim.h	50;"	d
+OP_LW	machine/mipssim.h	51;"	d
+OP_LWL	machine/mipssim.h	52;"	d
+OP_LWR	machine/mipssim.h	53;"	d
+OP_MFHI	machine/mipssim.h	55;"	d
+OP_MFLO	machine/mipssim.h	56;"	d
+OP_MTHI	machine/mipssim.h	58;"	d
+OP_MTLO	machine/mipssim.h	59;"	d
+OP_MULT	machine/mipssim.h	60;"	d
+OP_MULTU	machine/mipssim.h	61;"	d
+OP_NOR	machine/mipssim.h	62;"	d
+OP_OR	machine/mipssim.h	63;"	d
+OP_ORI	machine/mipssim.h	64;"	d
+OP_RES	machine/mipssim.h	87;"	d
+OP_RFE	machine/mipssim.h	65;"	d
+OP_SB	machine/mipssim.h	66;"	d
+OP_SH	machine/mipssim.h	67;"	d
+OP_SLL	machine/mipssim.h	68;"	d
+OP_SLLV	machine/mipssim.h	69;"	d
+OP_SLT	machine/mipssim.h	70;"	d
+OP_SLTI	machine/mipssim.h	71;"	d
+OP_SLTIU	machine/mipssim.h	72;"	d
+OP_SLTU	machine/mipssim.h	73;"	d
+OP_SRA	machine/mipssim.h	74;"	d
+OP_SRAV	machine/mipssim.h	75;"	d
+OP_SRL	machine/mipssim.h	76;"	d
+OP_SRLV	machine/mipssim.h	77;"	d
+OP_SUB	machine/mipssim.h	78;"	d
+OP_SUBU	machine/mipssim.h	79;"	d
+OP_SW	machine/mipssim.h	80;"	d
+OP_SWL	machine/mipssim.h	81;"	d
+OP_SWR	machine/mipssim.h	82;"	d
+OP_SYSCALL	machine/mipssim.h	85;"	d
+OP_UNIMP	machine/mipssim.h	86;"	d
+OP_XOR	machine/mipssim.h	83;"	d
+OP_XORI	machine/mipssim.h	84;"	d
+OSF_OR_AIX	lib/sysdep.cc	59;"	d	file:
+OSF_OR_AIX	lib/sysdep.cc	62;"	d	file:
+OneInstruction	machine/mipssim.cc	/^Machine::OneInstruction(Instruction *instr)$/;"	f	class:Machine
+OneTick	machine/interrupt.cc	/^Interrupt::OneTick()$/;"	f	class:Interrupt
+OpInfo	machine/mipssim.h	/^struct OpInfo {$/;"	s
+OpString	machine/mipssim.h	/^struct OpString {$/;"	s
+Open	filesys/filesys.cc	/^FileSystem::Open(char *name)$/;"	f	class:FileSystem
+Open	filesys/filesys.h	/^    OpenFile* Open(char *name) {$/;"	f	class:FileSystem
+Open	test/start.s	/^Open:$/;"	l
+OpenDoors	machine/elevator.cc	/^    int OpenDoors() {  \/\/ open the elevator doors, & return where we are$/;"	f	class:ElevatorInfo
+OpenDoors	machine/elevator.cc	/^ElevatorBank::OpenDoors(int elevator)$/;"	f	class:ElevatorBank
+OpenFile	filesys/openfile.cc	/^OpenFile::OpenFile(int sector)$/;"	f	class:OpenFile
+OpenFile	filesys/openfile.h	/^    OpenFile(int f) { file = f; currentOffset = 0; }	\/\/ open the file$/;"	f	class:OpenFile
+OpenFile	filesys/openfile.h	/^class OpenFile {$/;"	c
+OpenFileId	userprog/syscall.h	/^typedef int OpenFileId;	$/;"	t
+OpenForReadWrite	lib/sysdep.cc	/^OpenForReadWrite(char *name, bool crashOnError)$/;"	f
+OpenForWrite	lib/sysdep.cc	/^OpenForWrite(char *name)$/;"	f
+OpenSocket	lib/sysdep.cc	/^OpenSocket()$/;"	f
+OverflowException	machine/machine.h	/^		     OverflowException,     \/\/ Integer overflow in add or sub.$/;"	e	enum:ExceptionType
+P	threads/synch.cc	/^Semaphore::P()$/;"	f	class:Semaphore
+P1	threads/switch.h	162;"	d
+P2	threads/switch.h	163;"	d
+P3	threads/switch.h	164;"	d
+P4	threads/switch.h	165;"	d
+PBITMAP_H	filesys/pbitmap.h	10;"	d
+PC	threads/switch.h	115;"	d
+PC	threads/switch.h	243;"	d
+PC	threads/switch.h	39;"	d
+PC	threads/switch.h	79;"	d
+PCReg	machine/machine.h	63;"	d
+PCState	threads/switch.h	123;"	d
+PCState	threads/switch.h	145;"	d
+PCState	threads/switch.h	214;"	d
+PCState	threads/switch.h	259;"	d
+PCState	threads/switch.h	56;"	d
+PCState	threads/switch.h	87;"	d
+PLabelToAddr	threads/thread.cc	/^PLabelToAddr(void *plabel)$/;"	f	file:
+POST_H	network/post.h	27;"	d
+PacketHeader	machine/network.h	/^class PacketHeader {$/;"	c
+PageFaultException	machine/machine.h	/^		     PageFaultException,    \/\/ No valid translation found$/;"	e	enum:ExceptionType
+PageSize	machine/machine.h	/^const unsigned int PageSize = 128; 		\/\/ set the page size equal to$/;"	v
+PendingCompare	machine/interrupt.cc	/^PendingCompare (PendingInterrupt *x, PendingInterrupt *y)$/;"	f	file:
+PendingElevatorEvent	machine/elevator.cc	/^    PendingElevatorEvent(ElevatorEvent ev, int fl, int el) {$/;"	f	class:PendingElevatorEvent
+PendingElevatorEvent	machine/elevator.cc	/^class PendingElevatorEvent {$/;"	c	file:
+PendingInterrupt	machine/interrupt.cc	/^PendingInterrupt::PendingInterrupt(CallBackObj *callOnInt, $/;"	f	class:PendingInterrupt
+PendingInterrupt	machine/interrupt.h	/^class PendingInterrupt {$/;"	c
+PerformanceTest	filesys/fstest.cc	/^PerformanceTest()$/;"	f
+PersistBitMap	filesys/pbitmap.cc	/^PersistBitMap::PersistBitMap(OpenFile *file, int numItems):BitMap(numItems)$/;"	f	class:PersistBitMap
+PersistBitMap	filesys/pbitmap.cc	/^PersistBitMap::PersistBitMap(int numItems):BitMap(numItems) $/;"	f	class:PersistBitMap
+PersistBitMap	filesys/pbitmap.h	/^class PersistBitMap : public BitMap {$/;"	c
+PollFile	lib/sysdep.cc	/^PollFile(int fd)$/;"	f
+PollSocket	lib/sysdep.cc	/^PollSocket(int sockID)$/;"	f
+PostEvent	machine/elevator.cc	/^ElevatorBank::PostEvent(ListOfEvents *list, ElevatorEvent ev, $/;"	f	class:ElevatorBank
+PostOfficeInput	network/post.cc	/^PostOfficeInput::PostOfficeInput(int nBoxes)$/;"	f	class:PostOfficeInput
+PostOfficeInput	network/post.h	/^class PostOfficeInput : public CallBackObj {$/;"	c
+PostOfficeOutput	network/post.cc	/^PostOfficeOutput::PostOfficeOutput(double reliability, int nBoxes)$/;"	f	class:PostOfficeOutput
+PostOfficeOutput	network/post.h	/^class PostOfficeOutput : public CallBackObj {$/;"	c
+PostalDelivery	network/post.cc	/^PostOfficeInput::PostalDelivery()$/;"	f	class:PostOfficeInput
+PostalDelivery_st	network/post.cc	/^PostOfficeInput::PostalDelivery_st( PostOfficeInput * input )$/;"	f	class:PostOfficeInput
+Prepend	lib/list.cc	/^List<T>::Prepend(T item)$/;"	f	class:List
+Prepend	lib/list.h	/^    void Prepend(T item) { Insert(item); }  \/\/ *pre*pending has no meaning $/;"	f	class:SortedList
+PressButton	machine/elevator.cc	/^ElevatorBank::PressButton(int onFloor, Direction goingTo)$/;"	f	class:ElevatorBank
+PressFloor	machine/elevator.cc	/^ElevatorBank::PressFloor(int goingToFloor, int elevator)$/;"	f	class:ElevatorBank
+PrevPCReg	machine/machine.h	65;"	d
+Print	filesys/directory.cc	/^Directory::Print()$/;"	f	class:Directory
+Print	filesys/filehdr.cc	/^FileHeader::Print()$/;"	f	class:FileHeader
+Print	filesys/filesys.cc	/^FileSystem::Print()$/;"	f	class:FileSystem
+Print	filesys/fstest.cc	/^Print(char *name)$/;"	f
+Print	lib/bitmap.cc	/^BitMap::Print() const$/;"	f	class:BitMap
+Print	machine/stats.cc	/^Statistics::Print()$/;"	f	class:Statistics
+Print	threads/scheduler.cc	/^Scheduler::Print()$/;"	f	class:Scheduler
+Print	threads/thread.h	/^    void Print() { cout << name; }$/;"	f	class:Thread
+PrintHeader	network/post.cc	/^PrintHeader(PacketHeader pktHdr, MailHeader mailHdr)$/;"	f	file:
+PrintInt	test/start.s	/^PrintInt:$/;"	l
+PrintPending	machine/interrupt.cc	/^PrintPending (PendingInterrupt *pending)$/;"	f	file:
+PrintSector	machine/disk.cc	/^PrintSector (bool writing, int sector, char *data)$/;"	f	file:
+Priority	threads/scheduler.h	/^        Priority$/;"	e	enum:SchedulerType
+Put	network/post.cc	/^MailBox::Put(PacketHeader pktHdr, MailHeader mailHdr, char *data)$/;"	f	class:MailBox
+PutChar	machine/console.cc	/^ConsoleOutput::PutChar(char ch)$/;"	f	class:ConsoleOutput
+PutChar	userprog/synchconsole.cc	/^SynchConsoleOutput::PutChar(char ch)$/;"	f	class:SynchConsoleOutput
+R	bin/d.c	27;"	d	file:
+R31	machine/mipssim.h	97;"	d
+RAND	bin/disasm.c	/^int NROWS=64, ASSOC=1, LINESIZE=4, RAND=0, LRD=0;$/;"	v
+RAND	bin/main.c	/^int NROWS=64, ASSOC=1, LINESIZE=4, RAND=0, LRD=0;$/;"	v
+RD	bin/execute.c	/^RD(i)$/;"	f
+RD	machine/mipssim.h	/^enum RegType { NONE, RS, RT, RD, EXTRA }; $/;"	e	enum:RegType
+READY	threads/thread.h	/^enum ThreadStatus { JUST_CREATED, RUNNING, READY, BLOCKED };$/;"	e	enum:ThreadStatus
+RFMT	machine/mipssim.h	110;"	d
+RR	threads/scheduler.h	/^        RR,     \/\/ Round Robin$/;"	e	enum:SchedulerType
+RS	bin/execute.c	/^RS(i)$/;"	f
+RS	machine/mipssim.h	/^enum RegType { NONE, RS, RT, RD, EXTRA }; $/;"	e	enum:RegType
+RT	bin/execute.c	/^RT(i)$/;"	f
+RT	machine/mipssim.h	/^enum RegType { NONE, RS, RT, RD, EXTRA }; $/;"	e	enum:RegType
+RUNNING	threads/thread.h	/^enum ThreadStatus { JUST_CREATED, RUNNING, READY, BLOCKED };$/;"	e	enum:ThreadStatus
+RaiseException	machine/machine.cc	/^Machine::RaiseException(ExceptionType which, int badVAddr)$/;"	f	class:Machine
+RandomInit	lib/sysdep.cc	/^RandomInit(unsigned seed)$/;"	f
+RandomNumber	lib/sysdep.cc	/^RandomNumber()$/;"	f
+ReHash	lib/hash.cc	/^HashTable<Key,T>::ReHash()$/;"	f	class:HashTable
+ReachedNextFloor	machine/elevator.cc	/^    bool ReachedNextFloor() {	\/\/ has the elevator reached the next floor?$/;"	f	class:ElevatorInfo
+Read	bin/coff2flat.c	/^void Read(int fd, char *buf, int nBytes)$/;"	f
+Read	bin/coff2noff.c	/^void Read(int fd, char *buf, int nBytes)$/;"	f
+Read	filesys/openfile.cc	/^OpenFile::Read(char *into, int numBytes)$/;"	f	class:OpenFile
+Read	filesys/openfile.h	/^    int Read(char *into, int numBytes) {$/;"	f	class:OpenFile
+Read	lib/sysdep.cc	/^Read(int fd, char *buffer, int nBytes)$/;"	f
+Read	test/start.s	/^Read:$/;"	l
+ReadAt	filesys/openfile.cc	/^OpenFile::ReadAt(char *into, int numBytes, int position)$/;"	f	class:OpenFile
+ReadAt	filesys/openfile.h	/^    int ReadAt(char *into, int numBytes, int position) { $/;"	f	class:OpenFile
+ReadFromSocket	lib/sysdep.cc	/^ReadFromSocket(int sockID, char *buffer, int packetSize)$/;"	f
+ReadMem	machine/translate.cc	/^Machine::ReadMem(int addr, int size, int *value)$/;"	f	class:Machine
+ReadOnlyException	machine/machine.h	/^		     ReadOnlyException,     \/\/ Write attempted to page marked $/;"	e	enum:ExceptionType
+ReadPartial	lib/sysdep.cc	/^ReadPartial(int fd, char *buffer, int nBytes)$/;"	f
+ReadRegister	machine/machine.cc	/^Machine::ReadRegister(int num)$/;"	f	class:Machine
+ReadRequest	machine/disk.cc	/^Disk::ReadRequest(int sectorNumber, char* data)$/;"	f	class:Disk
+ReadSector	filesys/synchdisk.cc	/^SynchDisk::ReadSector(int sectorNumber, char* data)$/;"	f	class:SynchDisk
+ReadStruct	bin/coff2flat.c	32;"	d	file:
+ReadStruct	bin/coff2noff.c	67;"	d	file:
+ReadyToRun	threads/scheduler.cc	/^Scheduler::ReadyToRun (Thread *thread)$/;"	f	class:Scheduler
+Receive	machine/network.cc	/^NetworkInput::Receive(char* data)$/;"	f	class:NetworkInput
+Receive	network/post.cc	/^PostOfficeInput::Receive(int box, PacketHeader *pktHdr, $/;"	f	class:PostOfficeInput
+Reg	bin/execute.c	/^int Reg[32];			\/* GPR's *\/$/;"	v
+RegType	machine/mipssim.h	/^enum RegType { NONE, RS, RT, RD, EXTRA }; $/;"	g
+Regtrace	bin/disasm.c	/^int TRACE, Traptrace, Regtrace;$/;"	v
+Regtrace	bin/main.c	/^int TRACE, Traptrace, Regtrace;$/;"	v
+Release	threads/synch.cc	/^void Lock::Release()$/;"	f	class:Lock
+Remove	filesys/directory.cc	/^Directory::Remove(char *name)$/;"	f	class:Directory
+Remove	filesys/filesys.cc	/^FileSystem::Remove(char *name)$/;"	f	class:FileSystem
+Remove	filesys/filesys.h	/^    bool Remove(char *name) { return Unlink(name) == 0; }$/;"	f	class:FileSystem
+Remove	lib/hash.cc	/^HashTable<Key,T>::Remove(Key key)$/;"	f	class:HashTable
+Remove	lib/list.cc	/^List<T>::Remove(T item)$/;"	f	class:List
+RemoveFront	lib/list.cc	/^List<T>::RemoveFront()$/;"	f	class:List
+RemoveFront	threads/synchlist.cc	/^SynchList<T>::RemoveFront()$/;"	f	class:SynchList
+ResizeRatio	lib/hash.cc	/^const int ResizeRatio = 3;	\/\/ when do we grow the hash table?$/;"	v
+RestoreState	userprog/addrspace.cc	/^void AddrSpace::RestoreState() $/;"	f	class:AddrSpace
+RestoreUserState	threads/thread.cc	/^Thread::RestoreUserState()$/;"	f	class:Thread
+RetAddrReg	machine/machine.h	59;"	d
+RiderTest	machine/elevatortest.cc	/^ElevatorInspector::RiderTest () {$/;"	f	class:ElevatorInspector
+RotationTime	machine/stats.h	/^const int RotationTime = 500; 	\/\/ time disk takes to rotate one sector$/;"	v
+Run	machine/mipssim.cc	/^Machine::Run()$/;"	f	class:Machine
+Run	network/netkernel.cc	/^NetKernel::Run()$/;"	f	class:NetKernel
+Run	threads/kernel.cc	/^ThreadedKernel::Run()$/;"	f	class:ThreadedKernel
+Run	threads/scheduler.cc	/^Scheduler::Run (Thread *nextThread, bool finishing)$/;"	f	class:Scheduler
+Run	userprog/userkernel.cc	/^UserProgKernel::Run()$/;"	f	class:UserProgKernel
+S0	threads/switch.h	235;"	d
+S0	threads/switch.h	30;"	d
+S0	threads/switch.h	99;"	d
+S1	threads/switch.h	100;"	d
+S1	threads/switch.h	236;"	d
+S1	threads/switch.h	31;"	d
+S10	threads/switch.h	109;"	d
+S11	threads/switch.h	110;"	d
+S12	threads/switch.h	111;"	d
+S13	threads/switch.h	112;"	d
+S14	threads/switch.h	113;"	d
+S15	threads/switch.h	114;"	d
+S2	threads/switch.h	101;"	d
+S2	threads/switch.h	237;"	d
+S2	threads/switch.h	32;"	d
+S3	threads/switch.h	102;"	d
+S3	threads/switch.h	238;"	d
+S3	threads/switch.h	33;"	d
+S4	threads/switch.h	103;"	d
+S4	threads/switch.h	239;"	d
+S4	threads/switch.h	34;"	d
+S5	threads/switch.h	104;"	d
+S5	threads/switch.h	240;"	d
+S5	threads/switch.h	35;"	d
+S6	threads/switch.h	105;"	d
+S6	threads/switch.h	241;"	d
+S6	threads/switch.h	36;"	d
+S7	threads/switch.h	106;"	d
+S7	threads/switch.h	37;"	d
+S8	threads/switch.h	107;"	d
+S9	threads/switch.h	108;"	d
+SCHEDULER_H	threads/scheduler.h	10;"	d
+SC_Close	userprog/syscall.h	29;"	d
+SC_Create	userprog/syscall.h	25;"	d
+SC_Exec	userprog/syscall.h	23;"	d
+SC_Exit	userprog/syscall.h	22;"	d
+SC_Halt	userprog/syscall.h	21;"	d
+SC_Join	userprog/syscall.h	24;"	d
+SC_Open	userprog/syscall.h	26;"	d
+SC_PrintInt	userprog/syscall.h	32;"	d
+SC_Read	userprog/syscall.h	27;"	d
+SC_Sleep	userprog/syscall.h	33;"	d
+SC_ThreadFork	userprog/syscall.h	30;"	d
+SC_ThreadYield	userprog/syscall.h	31;"	d
+SC_Write	userprog/syscall.h	28;"	d
+SIGN_BIT	machine/mipssim.h	96;"	d
+SJF	threads/scheduler.h	/^        SJF,$/;"	e	enum:SchedulerType
+SOMAGIC	bin/coff.h	18;"	d
+SP	threads/switch.h	161;"	d
+SP	threads/switch.h	234;"	d
+SP	threads/switch.h	29;"	d
+SP	threads/switch.h	98;"	d
+SPECIAL	machine/mipssim.h	105;"	d
+STACK_FENCEPOST	threads/thread.cc	/^const int STACK_FENCEPOST = 0xdedbeef;$/;"	v
+STATS_H	machine/stats.h	12;"	d
+SWITCH	filesys/swtch.s	/^SWITCH:$/;"	l
+SWITCH	network/swtch.s	/^SWITCH:$/;"	l
+SWITCH	threads/switch.s	/^SWITCH$/;"	l
+SWITCH	threads/switch.s	/^SWITCH:$/;"	l
+SWITCH	threads/swtch.s	/^SWITCH:$/;"	l
+SWITCH	userprog/swtch.s	/^SWITCH:$/;"	l
+SWITCH_H	threads/switch.h	19;"	d
+SYNCHCONSOLE_H	userprog/synchconsole.h	12;"	d
+SYNCHDISK_H	filesys/synchdisk.h	10;"	d
+SYNCHLIST_H	threads/synchlist.h	11;"	d
+SYNCH_H	threads/synch.h	18;"	d
+SYSCALLS_H	userprog/syscall.h	14;"	d
+SYSDEP_H	lib/sysdep.h	12;"	d
+SanityCheck	lib/hash.cc	/^HashTable<Key,T>::SanityCheck() const$/;"	f	class:HashTable
+SanityCheck	lib/list.cc	/^List<T>::SanityCheck() const$/;"	f	class:List
+SanityCheck	lib/list.cc	/^SortedList<T>::SanityCheck() const$/;"	f	class:SortedList
+SaveState	userprog/addrspace.cc	/^void AddrSpace::SaveState() $/;"	f	class:AddrSpace
+SaveUserState	threads/thread.cc	/^Thread::SaveUserState()$/;"	f	class:Thread
+Schedule	machine/interrupt.cc	/^Interrupt::Schedule(CallBackObj *toCall, int fromNow, IntType type)$/;"	f	class:Interrupt
+Scheduler	threads/scheduler.cc	/^Scheduler::Scheduler()$/;"	f	class:Scheduler
+Scheduler	threads/scheduler.h	/^class Scheduler {$/;"	c
+SchedulerType	threads/scheduler.h	/^enum SchedulerType {$/;"	g
+SectorSize	machine/disk.h	/^const int SectorSize = 128;		\/\/ number of bytes per disk sector$/;"	v
+SectorsPerTrack	machine/disk.h	/^const int SectorsPerTrack  = 32;	\/\/ number of sectors per disk track $/;"	v
+Seek	filesys/openfile.cc	/^OpenFile::Seek(int position)$/;"	f	class:OpenFile
+SeekTime	machine/stats.h	/^const int SeekTime =	 500;  	\/\/ time disk takes to seek past one track$/;"	v
+Segment	bin/noff.h	/^} Segment;$/;"	t	typeref:struct:segment
+SelfTest	lib/bitmap.cc	/^BitMap::SelfTest() $/;"	f	class:BitMap
+SelfTest	lib/hash.cc	/^HashTable<Key,T>::SelfTest(T *p, int numEntries)$/;"	f	class:HashTable
+SelfTest	lib/list.cc	/^List<T>::SelfTest(T *p, int numEntries)$/;"	f	class:List
+SelfTest	lib/list.cc	/^SortedList<T>::SelfTest(T *p, int numEntries)$/;"	f	class:SortedList
+SelfTest	network/netkernel.cc	/^NetKernel::SelfTest() {$/;"	f	class:NetKernel
+SelfTest	threads/kernel.cc	/^ThreadedKernel::SelfTest() {$/;"	f	class:ThreadedKernel
+SelfTest	threads/synch.cc	/^Semaphore::SelfTest()$/;"	f	class:Semaphore
+SelfTest	threads/synchlist.cc	/^SynchList<T>::SelfTest(T val)$/;"	f	class:SynchList
+SelfTest	threads/thread.cc	/^Thread::SelfTest()$/;"	f	class:Thread
+SelfTest	userprog/userkernel.cc	/^UserProgKernel::SelfTest() {$/;"	f	class:UserProgKernel
+SelfTestHelper	threads/synch.cc	/^SelfTestHelper (Semaphore *pong) $/;"	f	file:
+SelfTestHelper	threads/synchlist.cc	/^SynchList<T>::SelfTestHelper() $/;"	f	class:SynchList
+SelfTestHelper_st	threads/synchlist.cc	/^SynchList<T>::SelfTestHelper_st(SynchList<T> *slist)$/;"	f	class:SynchList
+Semaphore	threads/synch.cc	/^Semaphore::Semaphore(char* debugName, int initialValue)$/;"	f	class:Semaphore
+Semaphore	threads/synch.h	/^class Semaphore {$/;"	c
+Send	machine/network.cc	/^NetworkOutput::Send(PacketHeader hdr, char* data)$/;"	f	class:NetworkOutput
+Send	network/post.cc	/^PostOfficeOutput::Send(PacketHeader pktHdr, MailHeader mailHdr, char* data)$/;"	f	class:PostOfficeOutput
+SendToSocket	lib/sysdep.cc	/^SendToSocket(int sockID, char *buffer, int packetSize, char *toName)$/;"	f
+SetInterrupt	machine/timer.cc	/^Timer::SetInterrupt() $/;"	f	class:Timer
+SetLevel	machine/interrupt.cc	/^Interrupt::SetLevel(IntStatus now)$/;"	f	class:Interrupt
+ShortToHost	bin/coff2noff.c	/^ShortToHost(unsigned short shortword) {$/;"	f
+ShortToHost	machine/translate.cc	/^ShortToHost(unsigned short shortword) {$/;"	f
+ShortToMachine	machine/translate.cc	/^ShortToMachine(unsigned short shortword) { return ShortToHost(shortword); }$/;"	f
+Signal	threads/synch.cc	/^void Condition::Signal(Lock* conditionLock)$/;"	f	class:Condition
+SimpleThread	threads/thread.cc	/^SimpleThread(int which)$/;"	f	file:
+Sleep	test/start.s	/^Sleep:$/;"	l
+Sleep	threads/thread.cc	/^Thread::Sleep (bool finishing)$/;"	f	class:Thread
+SleepList	threads/alarm.h	/^        SleepList()$/;"	f	class:Alarm::SleepList
+SleepList	threads/alarm.h	/^    class SleepList$/;"	c	class:Alarm
+SortedList	lib/list.h	/^    SortedList(int (*comp)(T x, T y)) : List<T>() { compare = comp;};$/;"	f	class:SortedList
+SortedList	lib/list.h	/^class SortedList : public List<T> {$/;"	c
+SpaceId	userprog/syscall.h	/^typedef int SpaceId;	$/;"	t
+StackAllocate	threads/thread.cc	/^Thread::StackAllocate (VoidFunctionPtr func, void *arg)$/;"	f	class:Thread
+StackReg	machine/machine.h	58;"	d
+StackSize	bin/coff2flat.c	31;"	d	file:
+StackSize	threads/thread.h	/^const int StackSize = (4 * 1024);	\/\/ in words$/;"	v
+StartupLR	threads/switch.h	221;"	d
+StartupPC	threads/switch.h	121;"	d
+StartupPC	threads/switch.h	155;"	d
+StartupPC	threads/switch.h	257;"	d
+StartupPC	threads/switch.h	54;"	d
+StartupPC	threads/switch.h	85;"	d
+StartupPCState	threads/switch.h	127;"	d
+StartupPCState	threads/switch.h	150;"	d
+StartupPCState	threads/switch.h	213;"	d
+StartupPCState	threads/switch.h	264;"	d
+StartupPCState	threads/switch.h	61;"	d
+StartupPCState	threads/switch.h	91;"	d
+Statistics	machine/stats.cc	/^Statistics::Statistics()$/;"	f	class:Statistics
+Statistics	machine/stats.h	/^class Statistics {$/;"	c
+SwapHeader	userprog/addrspace.cc	/^SwapHeader (NoffHeader *noffH)$/;"	f	file:
+SynchConsoleInput	userprog/synchconsole.cc	/^SynchConsoleInput::SynchConsoleInput(char *inputFile)$/;"	f	class:SynchConsoleInput
+SynchConsoleInput	userprog/synchconsole.h	/^class SynchConsoleInput : public CallBackObj {$/;"	c
+SynchConsoleOutput	userprog/synchconsole.cc	/^SynchConsoleOutput::SynchConsoleOutput(char *outputFile)$/;"	f	class:SynchConsoleOutput
+SynchConsoleOutput	userprog/synchconsole.h	/^class SynchConsoleOutput : public CallBackObj {$/;"	c
+SynchDisk	filesys/synchdisk.cc	/^SynchDisk::SynchDisk(char* name)$/;"	f	class:SynchDisk
+SynchDisk	filesys/synchdisk.h	/^class SynchDisk : public CallBackObj {$/;"	c
+SynchList	threads/synchlist.cc	/^SynchList<T>::SynchList()$/;"	f	class:SynchList
+SynchList	threads/synchlist.h	/^class SynchList {$/;"	c
+SyscallException	machine/machine.h	/^		     SyscallException,      \/\/ A program executed a system call.$/;"	e	enum:ExceptionType
+SystemMode	machine/interrupt.h	/^enum MachineStatus {IdleMode, SystemMode, UserMode};$/;"	e	enum:MachineStatus
+SystemTick	machine/stats.h	/^const int SystemTick =	  10; 	\/\/ advance each time interrupts are enabled$/;"	v
+THREAD_H	threads/thread.h	38;"	d
+TIMER_H	machine/timer.h	21;"	d
+TLBSize	machine/machine.h	/^const int TLBSize = 4;			\/\/ if there is a TLB, make it small$/;"	v
+TLB_H	machine/translate.h	19;"	d
+TOC	threads/switch.h	205;"	d
+TRACE	bin/disasm.c	/^int TRACE, Traptrace, Regtrace;$/;"	v
+TRACE	bin/main.c	/^int TRACE, Traptrace, Regtrace;$/;"	v
+TRUE	lib/utility.h	16;"	d
+Tell	lib/sysdep.cc	/^Tell(int fd)$/;"	f
+Test	lib/bitmap.cc	/^BitMap::Test(int which) const$/;"	f	class:BitMap
+Thread	threads/thread.cc	/^Thread::Thread(char* threadName)$/;"	f	class:Thread
+Thread	threads/thread.h	/^class Thread {$/;"	c
+ThreadBegin	threads/thread.cc	/^static void ThreadBegin() { kernel->currentThread->Begin(); }$/;"	f	file:
+ThreadFinish	threads/thread.cc	/^static void ThreadFinish()    { kernel->currentThread->Finish(); }$/;"	f	file:
+ThreadFork	test/start.s	/^ThreadFork:$/;"	l
+ThreadPrint	threads/thread.cc	/^void ThreadPrint(Thread *t) { t->Print(); }$/;"	f
+ThreadRoot	filesys/swtch.s	/^ThreadRoot:$/;"	l
+ThreadRoot	network/swtch.s	/^ThreadRoot:$/;"	l
+ThreadRoot	threads/switch.s	/^ThreadRoot$/;"	l
+ThreadRoot	threads/switch.s	/^ThreadRoot:$/;"	l
+ThreadRoot	threads/swtch.s	/^ThreadRoot:$/;"	l
+ThreadRoot	userprog/swtch.s	/^ThreadRoot:$/;"	l
+ThreadStatus	threads/thread.h	/^enum ThreadStatus { JUST_CREATED, RUNNING, READY, BLOCKED };$/;"	g
+ThreadYield	test/start.s	/^ThreadYield:$/;"	l
+ThreadedKernel	threads/kernel.cc	/^ThreadedKernel::ThreadedKernel(int argc, char **argv)$/;"	f	class:ThreadedKernel
+ThreadedKernel	threads/kernel.h	/^class ThreadedKernel {$/;"	c
+TimeToSeek	machine/disk.cc	/^Disk::TimeToSeek(int newSector, int *rotation) $/;"	f	class:Disk
+Timer	machine/timer.cc	/^Timer::Timer(bool doRandom, CallBackObj *toCall)$/;"	f	class:Timer
+Timer	machine/timer.h	/^class Timer : public CallBackObj {$/;"	c
+TimerInt	machine/interrupt.h	/^enum IntType { TimerInt, DiskInt, ConsoleWriteInt, ConsoleReadInt, $/;"	e	enum:IntType
+TimerTicks	machine/stats.h	/^const int TimerTicks = 	 100;  	\/\/ (average) time between timer interrupts$/;"	v
+TransferSize	filesys/fstest.cc	24;"	d	file:
+Translate	machine/translate.cc	/^Machine::Translate(int virtAddr, int* physAddr, int size, bool writing)$/;"	f	class:Machine
+TranslationEntry	machine/translate.h	/^class TranslationEntry {$/;"	c
+Traptrace	bin/disasm.c	/^int TRACE, Traptrace, Regtrace;$/;"	v
+Traptrace	bin/main.c	/^int TRACE, Traptrace, Regtrace;$/;"	v
+TypeToReg	machine/mipssim.cc	/^TypeToReg(RegType reg, Instruction *instr)$/;"	f	file:
+USERKERNEL_H	userprog/userkernel.h	13;"	d
+UTILITY_H	lib/utility.h	9;"	d
+Unlink	lib/sysdep.cc	/^Unlink(char *name)$/;"	f
+Up	machine/elevator.h	/^enum Direction { Down, Up, Neither};$/;"	e	enum:Direction
+UpButtonPressed	machine/elevator.h	/^enum ElevatorEvent { NoEvent, DoorsOpened, UpButtonPressed, $/;"	e	enum:ElevatorEvent
+UpdateLast	machine/disk.cc	/^Disk::UpdateLast(int newSector)$/;"	f	class:Disk
+UserMode	machine/interrupt.h	/^enum MachineStatus {IdleMode, SystemMode, UserMode};$/;"	e	enum:MachineStatus
+UserProgKernel	userprog/userkernel.cc	/^UserProgKernel::UserProgKernel(int argc, char **argv) $/;"	f	class:UserProgKernel
+UserProgKernel	userprog/userkernel.h	/^class UserProgKernel : public ThreadedKernel {$/;"	c
+UserStackSize	userprog/addrspace.h	20;"	d
+UserTick	machine/stats.h	/^const int UserTick = 	   1;	\/\/ advance for each user-level instruction $/;"	v
+V	threads/synch.cc	/^Semaphore::V()$/;"	f	class:Semaphore
+VirToPhy	userprog/addrspace.h	/^    int VirToPhy(int virtualAddr)const$/;"	f	class:AddrSpace
+VoidFunctionPtr	lib/utility.h	/^typedef void (*VoidFunctionPtr)(void *arg); $/;"	t
+VoidNoArgFunctionPtr	lib/utility.h	/^typedef void (*VoidNoArgFunctionPtr)(); $/;"	t
+Wait	threads/synch.cc	/^void Condition::Wait(Lock* conditionLock) $/;"	f	class:Condition
+WaitForNextControllerEvent	machine/elevatortest.cc	/^    ElevatorEvent WaitForNextControllerEvent(int *floor, int *elevator) {$/;"	f	class:ElevatorInspector	file:
+WaitForNextRiderEvent	machine/elevatortest.cc	/^    ElevatorEvent WaitForNextRiderEvent(int *floor, int *elevator) {$/;"	f	class:ElevatorInspector	file:
+WaitUntil	threads/alarm.cc	/^void Alarm::WaitUntil(int x)$/;"	f	class:Alarm
+WhenDoneLR	threads/switch.h	220;"	d
+WhenDonePC	threads/switch.h	120;"	d
+WhenDonePC	threads/switch.h	154;"	d
+WhenDonePC	threads/switch.h	256;"	d
+WhenDonePC	threads/switch.h	53;"	d
+WhenDonePC	threads/switch.h	84;"	d
+WhenDonePCState	threads/switch.h	126;"	d
+WhenDonePCState	threads/switch.h	149;"	d
+WhenDonePCState	threads/switch.h	212;"	d
+WhenDonePCState	threads/switch.h	263;"	d
+WhenDonePCState	threads/switch.h	60;"	d
+WhenDonePCState	threads/switch.h	90;"	d
+WhereIsElevator	machine/elevator.cc	/^ElevatorBank::WhereIsElevator(int elevator) $/;"	f	class:ElevatorBank
+WordToHost	bin/coff2noff.c	/^WordToHost(unsigned int word) {$/;"	f
+WordToHost	machine/translate.cc	/^WordToHost(unsigned int word) {$/;"	f
+WordToMachine	machine/translate.cc	/^WordToMachine(unsigned int word) { return WordToHost(word); }$/;"	f
+Write	bin/coff2flat.c	/^void Write(int fd, char *buf, int nBytes)$/;"	f
+Write	bin/coff2noff.c	/^void Write(int fd, char *buf, int nBytes)$/;"	f
+Write	filesys/openfile.cc	/^OpenFile::Write(char *into, int numBytes)$/;"	f	class:OpenFile
+Write	filesys/openfile.h	/^    int Write(char *from, int numBytes) {$/;"	f	class:OpenFile
+Write	test/start.s	/^Write:$/;"	l
+WriteAt	filesys/openfile.cc	/^OpenFile::WriteAt(char *from, int numBytes, int position)$/;"	f	class:OpenFile
+WriteAt	filesys/openfile.h	/^    int WriteAt(char *from, int numBytes, int position) { $/;"	f	class:OpenFile
+WriteBack	filesys/directory.cc	/^Directory::WriteBack(OpenFile *file)$/;"	f	class:Directory
+WriteBack	filesys/filehdr.cc	/^FileHeader::WriteBack(int sector)$/;"	f	class:FileHeader
+WriteBack	filesys/pbitmap.cc	/^PersistBitMap::WriteBack(OpenFile *file)$/;"	f	class:PersistBitMap
+WriteFile	lib/sysdep.cc	/^WriteFile(int fd, char *buffer, int nBytes)$/;"	f
+WriteMem	machine/translate.cc	/^Machine::WriteMem(int addr, int size, int value)$/;"	f	class:Machine
+WriteRegister	machine/machine.cc	/^Machine::WriteRegister(int num, int value)$/;"	f	class:Machine
+WriteRequest	machine/disk.cc	/^Disk::WriteRequest(int sectorNumber, char* data)$/;"	f	class:Disk
+WriteSector	filesys/synchdisk.cc	/^SynchDisk::WriteSector(int sectorNumber, char* data)$/;"	f	class:SynchDisk
+Yield	threads/thread.cc	/^Thread::Yield ()$/;"	f	class:Thread
+YieldOnReturn	machine/interrupt.cc	/^Interrupt::YieldOnReturn()$/;"	f	class:Interrupt
+_EAX	threads/switch.h	135;"	d
+_EBP	threads/switch.h	139;"	d
+_EBX	threads/switch.h	136;"	d
+_ECX	threads/switch.h	137;"	d
+_EDI	threads/switch.h	141;"	d
+_EDX	threads/switch.h	138;"	d
+_ESI	threads/switch.h	140;"	d
+_ESP	threads/switch.h	134;"	d
+_PC	threads/switch.h	142;"	d
+_SWITCH	threads/switch.s	/^_SWITCH:$/;"	l
+_ThreadRoot	threads/switch.s	/^_ThreadRoot:$/;"	l
+__main	test/start.s	/^__main:$/;"	l
+__start	test/start.s	/^__start:$/;"	l
+a0	threads/switch.s	/^#define a0	$16	\/* (T)		argument registers	*\/$/;"	d
+a0	threads/switch.s	/^#define a0      $4      \/* argument registers *\/$/;"	d
+a1	threads/switch.s	/^#define a1	$17$/;"	d
+a1	threads/switch.s	/^#define a1      $5$/;"	d
+active	machine/disk.h	/^    bool active;     			\/\/ Is a disk operation in progress?$/;"	m	class:Disk
+addThread	threads/alarm.h	/^        void addThread(Thread* t, int x) { sl.Insert(sleepThread(t, counter + x)); }$/;"	f	class:Alarm::SleepList
+addtable	bin/execute.c	/^int addtable[33][33];$/;"	v
+ai	threads/switch.s	/^#define ai	$25	\/* (T)		argument information	*\/$/;"	d
+alarm	threads/kernel.h	/^    Alarm *alarm;		\/\/ the software alarm clock    $/;"	m	class:ThreadedKernel
+amark	bin/int.h	15;"	d
+aouthdr	bin/coff.h	/^typedef struct aouthdr {$/;"	s
+aouthdr	bin/out.c	/^struct aouthdr aouthdr;$/;"	v	typeref:struct:aouthdr
+arch1cycles	bin/execute.c	/^int arch1cycles;$/;"	v
+args	machine/mipssim.h	/^    RegType args[3];$/;"	m	struct:OpString
+b31	bin/execute.c	31;"	d	file:
+begin	userprog/addrspace.cc	/^    unsigned   begin;$/;"	m	class:FreePhysicalPage	file:
+boxes	network/post.h	/^    MailBox *boxes;		\/\/ Table of mail boxes to hold incoming mail$/;"	m	class:PostOfficeInput
+bsize	bin/coff.h	/^        long    bsize;          \/* uninitialized data "   "             *\/$/;"	m	struct:aouthdr
+bss_start	bin/coff.h	/^        long    bss_start;      \/* base of bss used for this file       *\/$/;"	m	struct:aouthdr
+bsshead	bin/disasm.c	/^static SCNHDR texthead, rdatahead, datahead, sdatahead, sbsshead, bsshead;$/;"	v	file:
+bsshead	bin/main.c	/^static SCNHDR texthead, rdatahead, datahead, sdatahead, sbsshead, bsshead;$/;"	v	file:
+bucket	lib/hash.h	/^    int bucket;			\/\/ current bucket we are in$/;"	m	class:HashIterator
+bucketIter	lib/hash.h	/^    ListIterator<T> *bucketIter; \/\/ where we are in the bucket$/;"	m	class:HashIterator
+buckets	lib/hash.h	/^    Bucket *buckets;		\/\/ the array of hash buckets$/;"	m	class:HashTable
+bufferInit	machine/disk.h	/^    int bufferInit;			\/\/ When the track buffer started $/;"	m	class:Disk
+callControllers	machine/elevator.h	/^    CallBackObj *callControllers; \/\/ call when an event occurs that$/;"	m	class:ElevatorBank
+callOnInterrupt	machine/interrupt.h	/^    CallBackObj *callOnInterrupt;\/\/ The object (in the hardware device$/;"	m	class:PendingInterrupt
+callPeriodically	machine/timer.h	/^    CallBackObj *callPeriodically; \/\/ call this every TimerTicks time units $/;"	m	class:Timer
+callRiders	machine/elevator.h	/^    CallBackObj *callRiders; 	\/\/ call when an event occurs that$/;"	m	class:ElevatorBank
+callWhenAvail	machine/console.h	/^    CallBackObj *callWhenAvail;		\/\/ Interrupt handler to call when $/;"	m	class:ConsoleInput
+callWhenAvail	machine/network.h	/^    CallBackObj *callWhenAvail; \/\/ Interrupt handler, signalling packet has $/;"	m	class:NetworkInput
+callWhenDone	machine/console.h	/^    CallBackObj *callWhenDone;		\/\/ Interrupt handler to call when $/;"	m	class:ConsoleOutput
+callWhenDone	machine/disk.h	/^    CallBackObj *callWhenDone;		\/\/ Invoke when any disk request finishes$/;"	m	class:Disk
+callWhenDone	machine/network.h	/^    CallBackObj *callWhenDone;  \/\/ Interrupt handler, signalling next packet $/;"	m	class:NetworkOutput
+cc_add	bin/execute.c	34;"	d	file:
+cc_logic	bin/execute.c	48;"	d	file:
+cc_mulscc	bin/execute.c	54;"	d	file:
+cc_sub	bin/execute.c	40;"	d	file:
+cfetch	bin/int.h	22;"	d
+chanceToWork	machine/network.h	/^    double chanceToWork;	\/\/ Likelihood packet will be dropped$/;"	m	class:NetworkOutput
+checkWakeup	threads/alarm.cc	/^bool Alarm::SleepList::checkWakeup()$/;"	f	class:Alarm::SleepList
+cmp	threads/alarm.h	/^        static int cmp(sleepThread t1, sleepThread t2) { return t1.second < t2.second; }$/;"	f	class:Alarm::SleepList
+code	bin/noff.h	/^   Segment code;		\/* executable code segment *\/ $/;"	m	struct:noffHeader
+column	bin/out.c	/^static column = 1;$/;"	v	file:
+compare	lib/list.h	/^    int (*compare)(T x, T y);	\/\/ function for sorting list elements$/;"	m	class:SortedList
+consoleInput	userprog/synchconsole.h	/^    ConsoleInput *consoleInput;	\/\/ the hardware keyboard$/;"	m	class:SynchConsoleInput
+consoleOutput	userprog/synchconsole.h	/^    ConsoleOutput *consoleOutput;\/\/ the hardware display$/;"	m	class:SynchConsoleOutput
+controllerEvents	machine/elevator.h	/^    ListOfEvents *controllerEvents;\/\/ pending events relevant to controllers$/;"	m	class:ElevatorBank
+controllerWakeup	machine/elevatortest.cc	/^    Semaphore *controllerWakeup;\/\/ to synch controller with callbacks$/;"	m	class:ElevatorInspector	file:
+copyright	lib/copyright.h	/^static char *copyright = "Copyright (c) 1992-1993 The Regents of the University of California.  All rights reserved.";$/;"	v
+counter	threads/alarm.h	/^        int counter;$/;"	m	class:Alarm::SleepList
+cprmask	bin/coff.h	/^        long    cprmask[4];     \/* co-processor register masks          *\/$/;"	m	struct:aouthdr
+cstore	bin/int.h	29;"	d
+current	lib/list.h	/^    ListElement<T> *current;	\/\/ where we are in the list$/;"	m	class:ListIterator
+currentOffset	filesys/openfile.h	/^    int currentOffset;$/;"	m	class:OpenFile
+currentThread	threads/kernel.h	/^    Thread *currentThread;	\/\/ the thread holding the CPU$/;"	m	class:ThreadedKernel
+data	bin/out.c	/^  long data[MAXDATA];$/;"	m	struct:data	file:
+data	bin/out.c	/^struct data {$/;"	s	file:
+data	network/post.h	/^     char data[MaxMailSize];	\/\/ Payload -- message data$/;"	m	class:Mail
+dataSectors	filesys/filehdr.h	/^    int dataSectors[NumDirect];		\/\/ Disk sector numbers for each data $/;"	m	class:FileHeader
+data_start	bin/coff.h	/^        long    data_start;     \/* base of data used for this file      *\/$/;"	m	struct:aouthdr
+datahead	bin/disasm.c	/^static SCNHDR texthead, rdatahead, datahead, sdatahead, sbsshead, bsshead;$/;"	v	file:
+datahead	bin/main.c	/^static SCNHDR texthead, rdatahead, datahead, sdatahead, sbsshead, bsshead;$/;"	v	file:
+dbgAddr	lib/debug.h	/^const char dbgAddr = 'a'; 		\/\/ address spaces (USER_PROGRAM)$/;"	v
+dbgAll	lib/debug.h	/^const char dbgAll = '+';		\/\/ turn on all debug messages$/;"	v
+dbgDisk	lib/debug.h	/^const char dbgDisk = 'd'; 		\/\/ disk emulation (FILESYS)$/;"	v
+dbgFile	lib/debug.h	/^const char dbgFile = 'f'; 		\/\/ file system (FILESYS)$/;"	v
+dbgInt	lib/debug.h	/^const char dbgInt = 'i'; 		\/\/ interrupt emulation$/;"	v
+dbgMach	lib/debug.h	/^const char dbgMach = 'm'; 		\/\/ machine emulation (USER_PROGRAM)$/;"	v
+dbgNet	lib/debug.h	/^const char dbgNet = 'n'; 		\/\/ network emulation (NETWORK)$/;"	v
+dbgSynch	lib/debug.h	/^const char dbgSynch = 's';		\/\/ locks, semaphores, condition vars$/;"	v
+dbgThread	lib/debug.h	/^const char dbgThread = 't';		\/\/ threads$/;"	v
+debug	threads/main.cc	/^Debug *debug;$/;"	v
+debugUserProg	userprog/userkernel.h	/^    bool debugUserProg;		\/\/ single step user program$/;"	m	class:UserProgKernel
+directoryFile	filesys/filesys.h	/^   OpenFile* directoryFile;		\/\/ "Root" directory -- list of $/;"	m	class:FileSystem
+dirty	machine/translate.h	/^    bool dirty;         \/\/ This bit is set by the hardware every time the$/;"	m	class:TranslationEntry
+dis1	bin/disasm.c	/^dis1(xpc)$/;"	f
+disable	machine/timer.h	/^    bool disable;		\/\/ turn off the timer device after next$/;"	m	class:Timer
+disasm	bin/disasm.c	/^disasm(startpc, argc, argv)$/;"	f
+disk	filesys/synchdisk.h	/^    Disk *disk;		  		\/\/ Raw disk device$/;"	m	class:SynchDisk
+display	machine/elevator.cc	/^    Direction display;		\/\/ rider visible display (up or down)$/;"	m	class:ElevatorInfo	file:
+divRoundDown	lib/utility.h	24;"	d
+divRoundUp	lib/utility.h	25;"	d
+doorsOpen	machine/elevator.cc	/^    bool doorsOpen;		\/\/ are the doors open?$/;"	m	class:ElevatorInfo	file:
+dsize	bin/coff.h	/^        long    dsize;          \/* initialized data "  "                *\/$/;"	m	struct:aouthdr
+dump_ascii	bin/d.c	/^dump_ascii(instruction, pc)$/;"	f
+dump_reg	bin/execute.c	/^dump_reg()$/;"	f
+elevator	machine/elevator.cc	/^    int elevator;		\/\/ which elevator it referenced$/;"	m	class:PendingElevatorEvent	file:
+elevators	machine/elevator.h	/^    ElevatorInfo **elevators;	\/\/ array of per-elevator state$/;"	m	class:ElevatorBank
+elevators	machine/elevatortest.cc	/^    ElevatorBank *elevators;$/;"	m	class:ElevatorInspector	file:
+empty	userprog/addrspace.cc	/^    bool empty()const { return begin == end; }$/;"	f	class:FreePhysicalPage
+enableFlags	lib/debug.h	/^    char *enableFlags;		\/\/ controls which DEBUG messages are printed$/;"	m	class:Debug
+end	userprog/addrspace.cc	/^    unsigned   end;$/;"	m	class:FreePhysicalPage	file:
+entry	bin/coff.h	/^        long    entry;          \/* entry pt.                            *\/$/;"	m	struct:aouthdr
+event	machine/elevator.cc	/^    ElevatorEvent event;	\/\/ the pending event$/;"	m	class:PendingElevatorEvent	file:
+exceptionNames	machine/machine.cc	/^static char* exceptionNames[] = { "no exception", "syscall", $/;"	v	file:
+execfile	userprog/userkernel.h	/^	char*	execfile[10];$/;"	m	class:UserProgKernel
+execfileNum	userprog/userkernel.h	/^	int	execfileNum;$/;"	m	class:UserProgKernel
+extend	bin/instr.h	21;"	d
+extra	machine/mipssim.cc	/^    int extra;       \/\/ Immediate or target or shamt field or offset.$/;"	m	class:Instruction	file:
+f_flags	bin/coff.h	/^        unsigned short  f_flags;        \/* flags *\/$/;"	m	struct:filehdr
+f_magic	bin/coff.h	/^        unsigned short  f_magic;        \/* magic number *\/$/;"	m	struct:filehdr
+f_nscns	bin/coff.h	/^        unsigned short  f_nscns;        \/* number of sections *\/$/;"	m	struct:filehdr
+f_nsyms	bin/coff.h	/^        long            f_nsyms;        \/* sizeof(symbolic hdr) *\/$/;"	m	struct:filehdr
+f_opthdr	bin/coff.h	/^        unsigned short  f_opthdr;       \/* sizeof(optional hdr) *\/$/;"	m	struct:filehdr
+f_symptr	bin/coff.h	/^        long            f_symptr;       \/* file pointer to symbolic header *\/$/;"	m	struct:filehdr
+f_timdat	bin/coff.h	/^        long            f_timdat;       \/* time & date stamp *\/$/;"	m	struct:filehdr
+false	bin/execute.c	16;"	d	file:
+fetch	bin/int.h	19;"	d
+file	filesys/openfile.h	/^    int file;$/;"	m	class:OpenFile
+fileSystem	userprog/userkernel.h	/^    FileSystem *fileSystem;$/;"	m	class:UserProgKernel
+filehdr	bin/coff.h	/^struct filehdr {$/;"	s
+filehdr	bin/out.c	/^struct filehdr filehdr;$/;"	v	typeref:struct:filehdr
+filename	bin/disasm.c	/^static char filename[1000] = "a.out";	\/* default a.out file *\/$/;"	v	file:
+filename	bin/main.c	/^static char filename[1000] = "a.out";	\/* default a.out file *\/$/;"	v	file:
+fileno	machine/disk.h	/^    int fileno;				\/\/ UNIX file number for simulated disk $/;"	m	class:Disk
+first	lib/list.h	/^    ListElement<T> *first;  	\/\/ Head of the list, NULL if list is empty$/;"	m	class:List
+floor	machine/elevator.cc	/^    int floor;			\/\/ which floor it referenced$/;"	m	class:PendingElevatorEvent	file:
+fmt	bin/execute.c	/^char fmt[] = "%6d";$/;"	v
+fmt2	bin/execute.c	/^char fmt2[] = "------";$/;"	v
+format	machine/mipssim.h	/^    char *format;	\/\/ Printed version of instruction$/;"	m	struct:OpString
+format	machine/mipssim.h	/^    int format;		\/* Format type (IFMT or JFMT or RFMT) *\/$/;"	m	struct:OpInfo
+fp	bin/disasm.c	/^static FILE *fp;$/;"	v	file:
+fp	bin/main.c	/^static FILE *fp;$/;"	v	file:
+fp	threads/switch.s	/^#define fp      $30     \/* frame pointer *\/$/;"	d
+freeMapFile	filesys/filesys.h	/^   OpenFile* freeMapFile;		\/\/ Bit map of free disk blocks,$/;"	m	class:FileSystem
+freePhysicalPage	userprog/addrspace.cc	/^} freePhysicalPage;$/;"	v	typeref:class:FreePhysicalPage
+from	machine/network.h	/^    NetworkAddress from;	\/\/ source machine ID$/;"	m	class:PacketHeader
+from	network/post.h	/^    MailBoxAddress from;	\/\/ Mail box to reply to$/;"	m	class:MailHeader
+full	userprog/addrspace.cc	/^    bool full()const { return size() == NumPhysPages; }$/;"	f	class:FreePhysicalPage
+getDirection	machine/elevator.cc	/^ElevatorBank::getDirection(int elevator)$/;"	f	class:ElevatorBank
+getKey	lib/hash.h	/^    Key (*getKey)(T x);		\/\/ get Key from value$/;"	m	class:HashTable
+getLevel	machine/interrupt.h	/^    IntStatus getLevel() {return level;}$/;"	f	class:Interrupt
+getName	threads/synch.cc	/^Condition::getName()$/;"	f	class:Condition
+getName	threads/synch.cc	/^Lock::getName()$/;"	f	class:Lock
+getName	threads/synch.cc	/^Semaphore::getName()$/;"	f	class:Semaphore
+getName	threads/thread.h	/^    char* getName() { return (name); }$/;"	f	class:Thread
+getNextControllerEvent	machine/elevator.h	/^    ElevatorEvent getNextControllerEvent(int *floor, int *elevator) {$/;"	f	class:ElevatorBank
+getNextEvent	machine/elevator.cc	/^ElevatorBank::getNextEvent(ListOfEvents *list, int *floor, $/;"	f	class:ElevatorBank
+getNextRiderEvent	machine/elevator.h	/^    ElevatorEvent getNextRiderEvent(int *floor, int *elevator) {$/;"	f	class:ElevatorBank
+getStatus	machine/interrupt.h	/^    MachineStatus getStatus() { return status; } $/;"	f	class:Interrupt
+goingTo	machine/elevator.cc	/^    int goingTo;		\/\/ where is the elevator going (if anywhere)$/;"	m	class:ElevatorInfo	file:
+gp	threads/switch.s	/^#define	gp	$29	\/* (T)		(local) data pointer	*\/$/;"	d
+gp_value	bin/coff.h	/^        long    gp_value;       \/* the gp value used for this object    *\/$/;"	m	struct:aouthdr
+gprmask	bin/coff.h	/^        long    gprmask;        \/* general purpose register mask        *\/$/;"	m	struct:aouthdr
+hash	lib/hash.h	/^    unsigned (*hash)(Key x);	\/\/ the hash function$/;"	m	class:HashTable
+hashTestVector	lib/libtest.cc	/^static char *hashTestVector[] = { "0", "1", "2", "3", "4", "5", "6",$/;"	v	file:
+hdr	filesys/openfile.h	/^    FileHeader *hdr;			\/\/ Header for this file $/;"	m	class:OpenFile
+henter	bin/execute.c	/^henter(n)$/;"	f
+henters	bin/execute.c	/^void henters(n, hist)$/;"	f
+hist	bin/execute.c	/^static int hist[NNNN];$/;"	v	file:
+hists	bin/execute.c	/^static int hists[NH][NNN];$/;"	v	file:
+hoflo	bin/execute.c	/^int hoflo[NH], htotal[NH];$/;"	v
+hostName	network/netkernel.h	/^    int hostName;		\/\/ which machine is this$/;"	m	class:NetKernel
+hprint	bin/execute.c	/^hprint()$/;"	f
+htotal	bin/execute.c	/^int hoflo[NH], htotal[NH];$/;"	v
+idleTicks	machine/stats.h	/^    int idleTicks;       	\/\/ Time spent idle (no threads to run)$/;"	m	class:Statistics
+ifetch	bin/int.h	18;"	d
+ilog2	bin/execute.c	/^ilog2(i)$/;"	f
+imark	bin/int.h	16;"	d
+immed	bin/instr.h	15;"	d
+inFileAddr	bin/noff.h	/^  int inFileAddr;		\/* location of segment in this file *\/$/;"	m	struct:segment
+inHandler	machine/interrupt.h	/^    bool inHandler;		\/\/ TRUE if we are running an interrupt handler$/;"	m	class:Interrupt
+inHdr	machine/network.h	/^    PacketHeader inHdr;		\/\/ Information about arrived packet$/;"	m	class:NetworkInput
+inMotion	machine/elevator.cc	/^    bool inMotion;		\/\/ is the elevator moving?$/;"	m	class:ElevatorInfo	file:
+inUse	filesys/directory.h	/^    bool inUse;				\/\/ Is this directory entry in use?$/;"	m	class:DirectoryEntry
+inbox	machine/network.h	/^    char inbox[MaxPacketSize];  \/\/ Data for arrived packet$/;"	m	class:NetworkInput
+incoming	machine/console.h	/^    char incoming;    			\/\/ Contains the character to be read,$/;"	m	class:ConsoleInput
+init	machine/translate.h	/^    void init(unsigned v, unsigned p)$/;"	f	class:TranslationEntry
+initData	bin/noff.h	/^   Segment initData;		\/* initialized data segment *\/$/;"	m	struct:noffHeader
+intLevelNames	machine/interrupt.cc	/^static char *intLevelNames[] = { "off", "on"};$/;"	v	file:
+intTypeNames	machine/interrupt.cc	/^static char *intTypeNames[] = { "timer", "disk", "console write", $/;"	v	file:
+interrupt	threads/kernel.h	/^    Interrupt *interrupt;	\/\/ interrupt status$/;"	m	class:ThreadedKernel
+item	lib/list.h	/^    T item; 	   	     	\/\/ item on the list$/;"	m	class:ListElement
+kernel	threads/main.cc	/^KernelType *kernel;$/;"	v
+last	lib/list.h	/^    ListElement<T> *last;	\/\/ Last element of list$/;"	m	class:List
+lastFloor	machine/elevator.cc	/^    int lastFloor;		\/\/ last floor the elevator was on$/;"	m	class:ElevatorInfo	file:
+lastSector	machine/disk.h	/^    int lastSector;			\/\/ The previous disk request $/;"	m	class:Disk
+ldptr	bin/disasm.c	/^static LDFILE *ldptr;$/;"	v	file:
+ldptr	bin/main.c	/^static LDFILE *ldptr;$/;"	v	file:
+length	bin/out.c	/^  int length;$/;"	m	struct:data	file:
+length	machine/network.h	/^    unsigned length;	 	\/\/ bytes of packet data, excluding the $/;"	m	class:PacketHeader
+length	network/post.h	/^    unsigned length;		\/\/ Bytes of message data (excluding the $/;"	m	class:MailHeader
+level	machine/interrupt.h	/^    IntStatus level;		\/\/ are interrupts enabled or disabled?$/;"	m	class:Interrupt
+list	threads/synchlist.h	/^    List<T> *list;		\/\/ the list of things$/;"	m	class:SynchList
+listEmpty	threads/synchlist.h	/^    Condition *listEmpty;	\/\/ wait in Remove if the list is empty$/;"	m	class:SynchList
+listTestVector	lib/libtest.cc	/^static int listTestVector[] = { 9, 5, 7 };$/;"	v	file:
+load_program	bin/disasm.c	/^load_program(filename)$/;"	f
+load_program	bin/main.c	/^load_program(filename)$/;"	f
+load_section	bin/disasm.c	/^load_section(hd)$/;"	f
+lock	filesys/synchdisk.h	/^    Lock *lock;		  		\/\/ Only one read\/write request$/;"	m	class:SynchDisk
+lock	threads/synchlist.h	/^    Lock *lock;			\/\/ enforce mutual exclusive access to the list$/;"	m	class:SynchList
+lock	userprog/synchconsole.h	/^    Lock *lock;			\/\/ only one reader at a time$/;"	m	class:SynchConsoleInput
+lock	userprog/synchconsole.h	/^    Lock *lock;			\/\/ only one writer at a time$/;"	m	class:SynchConsoleOutput
+lockHolder	threads/synch.h	/^    Thread *lockHolder;		\/\/ thread currently holding lock$/;"	m	class:Lock
+longdis	bin/d.c	/^int longdis = 1;$/;"	v
+m_alloc	bin/disasm.c	/^int *m_alloc(n)$/;"	f
+m_alloc	bin/main.c	/^int *m_alloc(n)$/;"	f
+machine	userprog/userkernel.h	/^    Machine *machine;$/;"	m	class:UserProgKernel
+machineState	threads/thread.h	/^    void *machineState[MachineStateSize];  \/\/ all registers except for stackTop$/;"	m	class:Thread
+magic	bin/coff.h	/^        short   magic;          \/* see above                            *\/$/;"	m	struct:aouthdr
+mailHdr	network/post.h	/^     MailHeader mailHdr;	\/\/ Header appended by PostOffice$/;"	m	class:Mail
+main	bin/coff2flat.c	/^main (int argc, char **argv)$/;"	f
+main	bin/coff2noff.c	/^main (int argc, char **argv)$/;"	f
+main	bin/disasm.c	/^main(argc, argv)$/;"	f
+main	bin/main.c	/^main(argc, argv)$/;"	f
+main	bin/out.c	/^main(argc,argv)$/;"	f
+main	test/halt.c	/^main()$/;"	f
+main	test/matmult.c	/^main()$/;"	f
+main	test/schedule_1.c	/^main()$/;"	f
+main	test/schedule_2.c	/^main()$/;"	f
+main	test/shell.c	/^main()$/;"	f
+main	test/sleep.c	/^main() {$/;"	f
+main	test/sleep_1.c	/^main() {$/;"	f
+main	test/sleep_2.c	/^main() {$/;"	f
+main	test/sleep_3.c	/^main() {$/;"	f
+main	test/sort.c	/^main()$/;"	f
+main	test/test1.c	/^main()$/;"	f
+main	test/test2.c	/^main()$/;"	f
+main	test/test3.c	/^main()$/;"	f
+main	threads/main.cc	/^main(int argc, char **argv)$/;"	f
+mainMemory	machine/machine.h	/^    char *mainMemory;		\/\/ physical memory to store user program,$/;"	m	class:Machine
+map	lib/bitmap.h	/^    unsigned int *map;		\/\/ bit storage$/;"	m	class:BitMap
+max	lib/utility.h	21;"	d
+mem	bin/disasm.c	/^char mem[MEMSIZE];		\/* main memory. use malloc later *\/$/;"	v
+mem	bin/main.c	/^char mem[MEMSIZE];		\/* main memory. use malloc later *\/$/;"	v
+memoffset	bin/int.h	12;"	d
+messageAvailable	network/post.h	/^    Semaphore *messageAvailable;\/\/ V'ed when message has arrived from network$/;"	m	class:PostOfficeInput
+messageSent	network/post.h	/^    Semaphore *messageSent;	\/\/ V'ed when next message can be sent to network$/;"	m	class:PostOfficeOutput
+messages	network/post.h	/^    SynchList<Mail *> *messages; \/\/ A mailbox is just a list of arrived messages$/;"	m	class:MailBox
+min	lib/utility.h	20;"	d
+myprintf	bin/out.c	/^myprintf(va_alist)$/;"	f
+mysetfile	bin/out.c	/^mysetfile(f)$/;"	f
+mytab	bin/out.c	/^mytab(n)$/;"	f
+name	filesys/directory.h	/^    char name[FileNameMaxLen + 1];	\/\/ Text name for file, with +1 for $/;"	m	class:DirectoryEntry
+name	threads/synch.h	/^    char *name;			\/\/ debugging assist$/;"	m	class:Lock
+name	threads/synch.h	/^    char* name;        \/\/ useful for debugging$/;"	m	class:Semaphore
+name	threads/synch.h	/^    char* name;$/;"	m	class:Condition
+name	threads/thread.h	/^    char* name;$/;"	m	class:Thread
+network	network/post.h	/^    NetworkInput *network;	\/\/ Physical network connection$/;"	m	class:PostOfficeInput
+network	network/post.h	/^    NetworkOutput *network;	\/\/ Physical network connection$/;"	m	class:PostOfficeOutput
+next	lib/list.h	/^    ListElement *next;	     	\/\/ next element on list, NULL if this is last$/;"	m	class:ListElement
+noffFileName	bin/coff2noff.c	/^char *noffFileName = NULL;$/;"	v
+noffHeader	bin/noff.h	/^typedef struct noffHeader {$/;"	s
+noffMagic	bin/noff.h	/^   int noffMagic;		\/* should be NOFFMAGIC *\/$/;"	m	struct:noffHeader
+normalops	bin/opstrings.c	/^char *normalops[] = {$/;"	v
+numBits	lib/bitmap.h	/^    int numBits;		\/\/ number of bits in the bitmap$/;"	m	class:BitMap
+numBoxes	network/post.h	/^    int numBoxes;		\/\/ Number of mail boxes on *remote* side$/;"	m	class:PostOfficeOutput
+numBoxes	network/post.h	/^    int numBoxes;		\/\/ Number of mail boxes$/;"	m	class:PostOfficeInput
+numBuckets	lib/hash.h	/^    int numBuckets;		\/\/ the number of buckets$/;"	m	class:HashTable
+numBytes	filesys/filehdr.h	/^    int numBytes;			\/\/ Number of bytes in the file$/;"	m	class:FileHeader
+numConsoleCharsRead	machine/stats.h	/^    int numConsoleCharsRead;	\/\/ number of characters read from the keyboard$/;"	m	class:Statistics
+numConsoleCharsWritten	machine/stats.h	/^    int numConsoleCharsWritten; \/\/ number of characters written to the display$/;"	m	class:Statistics
+numDiskReads	machine/stats.h	/^    int numDiskReads;		\/\/ number of disk read requests$/;"	m	class:Statistics
+numDiskWrites	machine/stats.h	/^    int numDiskWrites;		\/\/ number of disk write requests$/;"	m	class:Statistics
+numElevators	machine/elevator.h	/^    int numElevators;		\/\/ how many elevators in this bank?$/;"	m	class:ElevatorBank
+numFloors	machine/elevator.h	/^    int numFloors;		\/\/ how many floors in this building?$/;"	m	class:ElevatorBank
+numInList	lib/list.h	/^    int numInList;		\/\/ number of elements in list$/;"	m	class:List
+numItems	lib/hash.h	/^    int numItems;		\/\/ the number of items in the table$/;"	m	class:HashTable
+numPacketsRecvd	machine/stats.h	/^    int numPacketsRecvd;	\/\/ number of packets received over the network$/;"	m	class:Statistics
+numPacketsSent	machine/stats.h	/^    int numPacketsSent;		\/\/ number of packets sent over the network$/;"	m	class:Statistics
+numPageFaults	machine/stats.h	/^    int numPageFaults;		\/\/ number of virtual memory page faults$/;"	m	class:Statistics
+numPages	userprog/addrspace.h	/^    unsigned int numPages;		\/\/ Number of pages in the virtual $/;"	m	class:AddrSpace
+numSectors	filesys/filehdr.h	/^    int numSectors;			\/\/ Number of data sectors in the file$/;"	m	class:FileHeader
+numWords	lib/bitmap.h	/^    int numWords;		\/\/ number of words of bitmap storage$/;"	m	class:BitMap
+numadds	bin/execute.c	/^int numadds=1, numsubs=1, numsuccesses, numcarries;$/;"	v
+numcarries	bin/execute.c	/^int numadds=1, numsubs=1, numsuccesses, numcarries;$/;"	v
+numjmpls	bin/execute.c	/^int numjmpls;$/;"	v
+numsubs	bin/execute.c	/^int numadds=1, numsubs=1, numsuccesses, numcarries;$/;"	v
+numsuccesses	bin/execute.c	/^int numadds=1, numsubs=1, numsuccesses, numcarries;$/;"	v
+ny	bin/execute.c	/^ny()$/;"	f
+off16	bin/instr.h	19;"	d
+off26	bin/instr.h	17;"	d
+opCode	machine/mipssim.cc	/^    char opCode;     \/\/ Type of instruction.  This is NOT the same as the$/;"	m	class:Instruction	file:
+opCode	machine/mipssim.h	/^    int opCode;		\/* Translated op code. *\/$/;"	m	struct:OpInfo
+opStrings	machine/mipssim.h	/^static struct OpString opStrings[] = {$/;"	v	typeref:struct:OpString
+opTable	machine/mipssim.h	/^static OpInfo opTable[] = {$/;"	v
+outfile	bin/out.c	/^static FILE *outfile = stdout;$/;"	v	file:
+packetAvail	machine/network.h	/^    bool packetAvail;		\/\/ Packet has arrived, can be pulled off of$/;"	m	class:NetworkInput
+pageTable	machine/machine.h	/^    TranslationEntry *pageTable;$/;"	m	class:Machine
+pageTable	userprog/addrspace.h	/^    TranslationEntry *pageTable;	\/\/ Assume linear page table translation$/;"	m	class:AddrSpace
+pageTableSize	machine/machine.h	/^    unsigned int pageTableSize;$/;"	m	class:Machine
+patable	bin/execute.c	/^patable(tab)$/;"	f
+pc	bin/disasm.c	/^int pc;$/;"	v
+pending	machine/interrupt.h	/^    SortedList<PendingInterrupt *> *pending;		$/;"	m	class:Interrupt
+physicalPage	machine/translate.h	/^    unsigned int physicalPage;  \/\/ The page number in real memory (relative to the$/;"	m	class:TranslationEntry
+ping	threads/synch.cc	/^static Semaphore *ping;$/;"	v	file:
+pktHdr	network/post.h	/^     PacketHeader pktHdr;	\/\/ Header appended by Network$/;"	m	class:Mail
+pop	userprog/addrspace.cc	/^    unsigned pop() { ASSERT(!empty()); return Array[begin++%NumPhysPages]; }$/;"	f	class:FreePhysicalPage
+postOfficeIn	network/netkernel.h	/^    PostOfficeInput *postOfficeIn;$/;"	m	class:NetKernel
+postOfficeOut	network/netkernel.h	/^    PostOfficeOutput *postOfficeOut;$/;"	m	class:NetKernel
+print_reloc	bin/out.c	/^print_reloc(vaddr,i,j)$/;"	f
+print_section	bin/out.c	/^print_section(i)$/;"	f
+printf	bin/out.c	190;"	d	file:
+printhist	bin/execute.c	/^printhist()$/;"	f
+printstatistics	bin/execute.c	/^printstatistics()$/;"	f
+push	userprog/addrspace.cc	/^    void push(unsigned p) { ASSERT(!full()); Array[end++%NumPhysPages] = p; }$/;"	f	class:FreePhysicalPage
+putBusy	machine/console.h	/^    bool putBusy;    			\/\/ Is a PutChar operation in progress?$/;"	m	class:ConsoleOutput
+pv	threads/switch.s	/^#define pv	$27	\/* (T)		procedure value		*\/$/;"	d
+queue	threads/synch.h	/^    List<Thread *> *queue;     $/;"	m	class:Semaphore
+ra	threads/switch.s	/^#define ra	$26	\/* (T)		return address		*\/$/;"	d
+ra	threads/switch.s	/^#define ra      $31     \/* return address *\/$/;"	d
+randomSlice	threads/kernel.h	/^    bool randomSlice;		\/\/ enable pseudo-random time slicing$/;"	m	class:ThreadedKernel
+randomize	machine/timer.h	/^    bool randomize;		\/\/ set if we need to use a random timeout delay$/;"	m	class:Timer
+rd	bin/instr.h	11;"	d
+rd	machine/mipssim.cc	/^    char rs, rt, rd; \/\/ Three registers from instruction.$/;"	m	class:Instruction	file:
+rdatahead	bin/disasm.c	/^static SCNHDR texthead, rdatahead, datahead, sdatahead, sbsshead, bsshead;$/;"	v	file:
+rdatahead	bin/main.c	/^static SCNHDR texthead, rdatahead, datahead, sdatahead, sbsshead, bsshead;$/;"	v	file:
+readFileNo	machine/console.h	/^    int readFileNo;			\/\/ UNIX file emulating the keyboard $/;"	m	class:ConsoleInput
+readOnly	machine/translate.h	/^    bool readOnly;	\/\/ If this bit is set, the user program is not allowed$/;"	m	class:TranslationEntry
+read_struct	bin/out.c	29;"	d	file:
+readyList	threads/scheduler.h	/^	List<Thread *> *readyList;	\/\/ queue of threads that are ready to run,$/;"	m	class:Scheduler
+registers	machine/machine.h	/^    int registers[NumTotalRegs]; \/\/ CPU registers, for executing user programs$/;"	m	class:Machine
+regstrings	bin/d.c	/^char *regstrings[] =$/;"	v
+reliability	network/netkernel.h	/^    double reliability;		\/\/ likelihood messages are dropped$/;"	m	class:NetKernel
+reloc	bin/out.c	/^  struct reloc reloc[MAXRELOCS];$/;"	m	struct:data	typeref:struct:data::reloc	file:
+reloc_type	bin/out.c	/^char *reloc_type[] = {$/;"	v
+relocs	bin/out.c	/^  int relocs;$/;"	m	struct:data	file:
+restPlace	userprog/addrspace.h	/^    static int restPlace(int virtualAddr) { return PageSize - virtualAddr % PageSize; }$/;"	f	class:AddrSpace
+riderEvents	machine/elevator.h	/^    ListOfEvents *riderEvents;	\/\/ pending events relevant to riders$/;"	m	class:ElevatorBank
+riderWakeup	machine/elevatortest.cc	/^    Semaphore *riderWakeup;	\/\/ to synchronize rider with callbacks$/;"	m	class:ElevatorInspector	file:
+riders	machine/elevator.cc	/^    List<Thread *> *riders;	\/\/ who is on board?$/;"	m	class:ElevatorInfo	file:
+rs	bin/instr.h	13;"	d
+rs	machine/mipssim.cc	/^    char rs, rt, rd; \/\/ Three registers from instruction.$/;"	m	class:Instruction	file:
+rt	bin/instr.h	12;"	d
+rt	machine/mipssim.cc	/^    char rs, rt, rd; \/\/ Three registers from instruction.$/;"	m	class:Instruction	file:
+runUntilTime	machine/machine.h	/^    int runUntilTime;		\/\/ drop back into the debugger when simulated$/;"	m	class:Machine
+runprogram	bin/execute.c	/^runprogram(startpc, argc, argv)$/;"	f
+s0	threads/switch.s	/^#define s0	$9	\/* (S)		call-safe registers	*\/$/;"	d
+s0	threads/switch.s	/^#define s0      $16     \/* callee saved *\/$/;"	d
+s1	threads/switch.s	/^#define s1	$10$/;"	d
+s1	threads/switch.s	/^#define s1      $17$/;"	d
+s2	threads/switch.s	/^#define s2	$11$/;"	d
+s2	threads/switch.s	/^#define s2      $18$/;"	d
+s3	threads/switch.s	/^#define s3	$12$/;"	d
+s3	threads/switch.s	/^#define s3      $19$/;"	d
+s4	threads/switch.s	/^#define s4	$13$/;"	d
+s4	threads/switch.s	/^#define s4      $20$/;"	d
+s5	threads/switch.s	/^#define s5	$14$/;"	d
+s5	threads/switch.s	/^#define s5      $21$/;"	d
+s6	threads/switch.s	/^#define s6	$15$/;"	d
+s6	threads/switch.s	/^#define s6      $22$/;"	d
+s7	threads/switch.s	/^#define s7      $23$/;"	d
+s_flags	bin/coff.h	/^        long            s_flags;        \/* flags *\/$/;"	m	struct:scnhdr
+s_lnnoptr	bin/coff.h	/^        long            s_lnnoptr;      \/* file ptr to gp histogram *\/$/;"	m	struct:scnhdr
+s_name	bin/coff.h	/^        char            s_name[8];      \/* section name *\/$/;"	m	struct:scnhdr
+s_nlnno	bin/coff.h	/^        unsigned short  s_nlnno;        \/* number of gp histogram entries *\/$/;"	m	struct:scnhdr
+s_nreloc	bin/coff.h	/^        unsigned short  s_nreloc;       \/* number of relocation entries *\/$/;"	m	struct:scnhdr
+s_paddr	bin/coff.h	/^        long            s_paddr;        \/* physical address, aliased s_nlib *\/$/;"	m	struct:scnhdr
+s_relptr	bin/coff.h	/^        long            s_relptr;       \/* file ptr to relocation *\/$/;"	m	struct:scnhdr
+s_scnptr	bin/coff.h	/^        long            s_scnptr;       \/* file ptr to raw data for section *\/$/;"	m	struct:scnhdr
+s_size	bin/coff.h	/^        long            s_size;         \/* section size *\/$/;"	m	struct:scnhdr
+s_vaddr	bin/coff.h	/^        long            s_vaddr;        \/* virtual address *\/$/;"	m	struct:scnhdr
+sbsshead	bin/disasm.c	/^static SCNHDR texthead, rdatahead, datahead, sdatahead, sbsshead, bsshead;$/;"	v	file:
+sbsshead	bin/main.c	/^static SCNHDR texthead, rdatahead, datahead, sdatahead, sbsshead, bsshead;$/;"	v	file:
+scheduler	threads/kernel.h	/^    Scheduler *scheduler;	\/\/ the ready list$/;"	m	class:ThreadedKernel
+schedulerType	threads/scheduler.h	/^	SchedulerType schedulerType;$/;"	m	class:Scheduler
+scnhdr	bin/coff.h	/^struct scnhdr {$/;"	s
+scnhdr	bin/out.c	/^struct scnhdr scnhdr[MAXSCNS];$/;"	v	typeref:struct:scnhdr
+sdatahead	bin/disasm.c	/^static SCNHDR texthead, rdatahead, datahead, sdatahead, sbsshead, bsshead;$/;"	v	file:
+sdatahead	bin/main.c	/^static SCNHDR texthead, rdatahead, datahead, sdatahead, sbsshead, bsshead;$/;"	v	file:
+section	bin/out.c	/^struct data section[MAXSCNS];$/;"	v	typeref:struct:data
+section_name	bin/out.c	/^char *section_name[] = {$/;"	v
+sector	filesys/directory.h	/^    int sector;				\/\/ Location on disk to find the $/;"	m	class:DirectoryEntry
+seekPosition	filesys/openfile.h	/^    int seekPosition;			\/\/ Current position within the file$/;"	m	class:OpenFile
+segment	bin/noff.h	/^typedef struct segment {$/;"	s
+self	bin/disasm.c	/^static char self[256];			\/* name of invoking program *\/$/;"	v	file:
+self	bin/main.c	/^static char self[256];			\/* name of invoking program *\/$/;"	v	file:
+selfTestPing	threads/synchlist.h	/^    SynchList<T> *selfTestPing;$/;"	m	class:SynchList
+semaphore	filesys/synchdisk.h	/^    Semaphore *semaphore; 		\/\/ To synchronize requesting thread $/;"	m	class:SynchDisk
+semaphore	threads/synch.h	/^    Semaphore *semaphore;	\/\/ we use a semaphore to implement lock$/;"	m	class:Lock
+sendBusy	machine/network.h	/^    bool sendBusy;		\/\/ Packet is being sent.$/;"	m	class:NetworkOutput
+sendLock	network/post.h	/^    Lock *sendLock;		\/\/ Only one outgoing message at a time$/;"	m	class:PostOfficeOutput
+setStatus	machine/interrupt.h	/^    void setStatus(MachineStatus st) { status = st; }$/;"	f	class:Interrupt
+setStatus	threads/thread.h	/^    void setStatus(ThreadStatus st) { status = st; }$/;"	f	class:Thread
+sfetch	bin/int.h	20;"	d
+shamt	bin/instr.h	14;"	d
+singleStep	machine/machine.h	/^    bool singleStep;		\/\/ drop back into the debugger after each$/;"	m	class:Machine
+size	bin/noff.h	/^  int size;			\/* size of segment *\/$/;"	m	struct:segment
+size	userprog/addrspace.cc	/^    unsigned size()const { return end - begin; }$/;"	f	class:FreePhysicalPage
+sl	threads/alarm.h	/^        SortedList<sleepThread> sl;$/;"	m	class:Alarm::SleepList
+sleepList	threads/alarm.h	/^    } sleepList;$/;"	m	class:Alarm	typeref:class:Alarm::SleepList
+sleepThread	threads/alarm.h	/^        typedef pair<Thread*, int> sleepThread;$/;"	t	class:Alarm::SleepList
+sock	machine/network.h	/^    int sock;                   \/\/ UNIX socket number for incoming packets$/;"	m	class:NetworkInput
+sock	machine/network.h	/^    int sock;                   \/\/ UNIX socket number for outgoing packets$/;"	m	class:NetworkOutput
+sockName	machine/network.h	/^    char sockName[32];          \/\/ File name corresponding to UNIX socket$/;"	m	class:NetworkInput
+sp	threads/switch.s	/^#define sp	$30	\/* (S)		stack pointer		*\/$/;"	d
+sp	threads/switch.s	/^#define sp      $29     \/* stack pointer *\/$/;"	d
+space	threads/thread.h	/^    AddrSpace *space;			\/\/ User code this thread is running.$/;"	m	class:Thread
+specialTable	machine/mipssim.h	/^static int specialTable[] = {$/;"	v
+specialops	bin/opstrings.c	/^char *specialops[] = {$/;"	v
+sptr	bin/d.c	/^int sptr;$/;"	v
+sspace	bin/out.c	/^char sspace[20000];$/;"	v
+sstore	bin/int.h	27;"	d
+stack	threads/thread.h	/^    int *stack; 	 	\/\/ Bottom of the stack $/;"	m	class:Thread
+stackTop	threads/thread.h	/^    int *stackTop;			 \/\/ the current stack pointer$/;"	m	class:Thread
+stats	threads/kernel.h	/^    Statistics *stats;		\/\/ performance metrics$/;"	m	class:ThreadedKernel
+status	machine/interrupt.h	/^    MachineStatus status;	\/\/ idle, kernel mode, user mode$/;"	m	class:Interrupt
+status	threads/thread.h	/^    ThreadStatus status;	\/\/ ready, running or blocked$/;"	m	class:Thread
+storage_class	bin/out.c	/^char *storage_class[] = {$/;"	v
+store	bin/int.h	25;"	d
+string	bin/main.c	/^char *string(s)$/;"	f
+subtable	bin/execute.c	/^int subtable[33][33];$/;"	v
+symbol_type	bin/out.c	/^char *symbol_type[] = {$/;"	v
+symbols	bin/out.c	/^EXTR symbols[MAXSYMS];$/;"	v
+symhdr	bin/out.c	/^HDRR symhdr;$/;"	v
+synchDisk	userprog/userkernel.h	/^    SynchDisk *synchDisk;$/;"	m	class:UserProgKernel
+systemTicks	machine/stats.h	/^    int systemTicks;	 	\/\/ Time spent executing system code$/;"	m	class:Statistics
+system_break	bin/system.c	/^system_break()$/;"	f
+system_trap	bin/system.c	/^system_trap()$/;"	f
+t	userprog/userkernel.h	/^	Thread* t[10];$/;"	m	class:UserProgKernel
+t0	threads/switch.s	/^#define t0	$1	\/* (T)		temporary registers	*\/$/;"	d
+table	filesys/directory.h	/^    DirectoryEntry *table;		\/\/ Table of pairs: $/;"	m	class:Directory
+table	lib/hash.h	/^    HashTable<Key,T> *table;	\/\/ the hash table we're stepping through$/;"	m	class:HashIterator
+tableSize	filesys/directory.h	/^    int tableSize;			\/\/ Number of directory entries$/;"	m	class:Directory
+text_start	bin/coff.h	/^        long    text_start;     \/* base of text used for this file      *\/$/;"	m	struct:aouthdr
+texthead	bin/disasm.c	/^static SCNHDR texthead, rdatahead, datahead, sdatahead, sbsshead, bsshead;$/;"	v	file:
+texthead	bin/main.c	/^static SCNHDR texthead, rdatahead, datahead, sdatahead, sbsshead, bsshead;$/;"	v	file:
+timer	threads/alarm.h	/^    Timer *timer;		\/\/ the hardware timer device$/;"	m	class:Alarm
+tlb	machine/machine.h	/^    TranslationEntry *tlb;		\/\/ this pointer should be considered $/;"	m	class:Machine
+to	machine/network.h	/^    NetworkAddress to;		\/\/ Destination machine ID$/;"	m	class:PacketHeader
+to	network/post.h	/^    MailBoxAddress to;		\/\/ Destination mail box$/;"	m	class:MailHeader
+toBeDestroyed	threads/scheduler.h	/^	Thread *toBeDestroyed;		\/\/ finishing thread to be destroyed$/;"	m	class:Scheduler
+top4	bin/instr.h	18;"	d
+totalTicks	machine/stats.h	/^    int totalTicks;      	\/\/ Total time running Nachos$/;"	m	class:Statistics
+true	bin/execute.c	15;"	d	file:
+tsize	bin/coff.h	/^        long    tsize;          \/* text size in bytes, padded to DW bdry*\/$/;"	m	struct:aouthdr
+type	machine/interrupt.h	/^    IntType type;		\/\/ for debugging$/;"	m	class:PendingInterrupt
+u	bin/execute.c	/^u()				\/* unimplemented *\/$/;"	f
+u_to_int_addr	bin/system.c	/^char *u_to_int_addr(ptr)$/;"	f
+u_to_int_fd	bin/system.c	/^u_to_int_fd(fd)$/;"	f
+ucfetch	bin/int.h	23;"	d
+uninitData	bin/noff.h	/^   Segment uninitData;		\/* uninitialized data segment --$/;"	m	struct:noffHeader
+use	machine/translate.h	/^    bool use;           \/\/ This bit is set by the hardware every time the$/;"	m	class:TranslationEntry
+userRegisters	threads/thread.h	/^    int userRegisters[NumTotalRegs];	\/\/ user-level CPU register state$/;"	m	class:Thread
+userTicks	machine/stats.h	/^    int userTicks;       	\/\/ Time spent executing user code$/;"	m	class:Statistics
+usfetch	bin/int.h	21;"	d
+v0	threads/switch.s	/^#define	v0	$0	\/* (T)		return value		*\/$/;"	d
+valid	machine/translate.h	/^    bool valid;         \/\/ If this bit is set, the translation is ignored.$/;"	m	class:TranslationEntry
+value	machine/mipssim.cc	/^    unsigned int value; \/\/ binary representation of the instruction$/;"	m	class:Instruction	file:
+value	threads/synch.h	/^    int value;         \/\/ semaphore value, always >= 0$/;"	m	class:Semaphore
+virtualAddr	bin/noff.h	/^  int virtualAddr;		\/* location of segment in virt addr space *\/$/;"	m	struct:segment
+virtualPage	machine/translate.h	/^    unsigned int virtualPage;  	\/\/ The page number in virtual memory.$/;"	m	class:TranslationEntry
+vstamp	bin/coff.h	/^        short   vstamp;         \/* version stamp                        *\/$/;"	m	struct:aouthdr
+waitFor	userprog/synchconsole.h	/^    Semaphore *waitFor;		\/\/ wait for callBack$/;"	m	class:SynchConsoleInput
+waitFor	userprog/synchconsole.h	/^    Semaphore *waitFor;		\/\/ wait for callBack$/;"	m	class:SynchConsoleOutput
+waitQueue	threads/synch.h	/^    List<Semaphore *> *waitQueue;	\/\/ list of waiting threads$/;"	m	class:Condition
+when	machine/interrupt.h	/^    int when;			\/\/ When the interrupt is supposed to fire$/;"	m	class:PendingInterrupt
+willArrive	machine/elevator.cc	/^    int willArrive;		\/\/ when will it arrive at the next floor?$/;"	m	class:ElevatorInfo	file:
+writeFileNo	machine/console.h	/^    int writeFileNo;			\/\/ UNIX file emulating the display$/;"	m	class:ConsoleOutput
+yieldOnReturn	machine/interrupt.h	/^    bool yieldOnReturn; 	\/\/ TRUE if we are to context switch$/;"	m	class:Interrupt
+z	threads/switch.s	/^#define z       $0      \/* zero register *\/$/;"	d
+zero	threads/switch.s	/^#define zero	$31	\/* 		wired zero		*\/$/;"	d
+~AddrSpace	userprog/addrspace.cc	/^AddrSpace::~AddrSpace()$/;"	f	class:AddrSpace
+~Alarm	threads/alarm.h	/^    ~Alarm() { delete timer; }$/;"	f	class:Alarm
+~BitMap	lib/bitmap.cc	/^BitMap::~BitMap()$/;"	f	class:BitMap
+~CallBackObj	machine/callback.h	/^     virtual ~CallBackObj() {};$/;"	f	class:CallBackObj
+~Condition	threads/synch.cc	/^Condition::~Condition()$/;"	f	class:Condition
+~ConsoleInput	machine/console.cc	/^ConsoleInput::~ConsoleInput()$/;"	f	class:ConsoleInput
+~ConsoleOutput	machine/console.cc	/^ConsoleOutput::~ConsoleOutput()$/;"	f	class:ConsoleOutput
+~Directory	filesys/directory.cc	/^Directory::~Directory()$/;"	f	class:Directory
+~Disk	machine/disk.cc	/^Disk::~Disk()$/;"	f	class:Disk
+~ElevatorBank	machine/elevator.cc	/^ElevatorBank::~ElevatorBank() {$/;"	f	class:ElevatorBank
+~ElevatorInfo	machine/elevator.cc	/^    ~ElevatorInfo() { delete riders; }$/;"	f	class:ElevatorInfo
+~ElevatorInspector	machine/elevatortest.cc	/^ElevatorInspector::~ElevatorInspector()$/;"	f	class:ElevatorInspector
+~FreePhysicalPage	userprog/addrspace.cc	/^    ~FreePhysicalPage() { delete []Array; }$/;"	f	class:FreePhysicalPage
+~HashIterator	lib/hash.h	/^    ~HashIterator() { if (bucketIter != NULL) delete bucketIter;}; $/;"	f	class:HashIterator
+~HashTable	lib/hash.cc	/^HashTable<Key,T>::~HashTable()$/;"	f	class:HashTable
+~Interrupt	machine/interrupt.cc	/^Interrupt::~Interrupt()$/;"	f	class:Interrupt
+~List	lib/list.cc	/^List<T>::~List()$/;"	f	class:List
+~Lock	threads/synch.cc	/^Lock::~Lock()$/;"	f	class:Lock
+~Machine	machine/machine.cc	/^Machine::~Machine()$/;"	f	class:Machine
+~MailBox	network/post.cc	/^MailBox::~MailBox()$/;"	f	class:MailBox
+~NetKernel	network/netkernel.cc	/^NetKernel::~NetKernel()$/;"	f	class:NetKernel
+~NetworkInput	machine/network.cc	/^NetworkInput::~NetworkInput()$/;"	f	class:NetworkInput
+~NetworkOutput	machine/network.cc	/^NetworkOutput::~NetworkOutput()$/;"	f	class:NetworkOutput
+~OpenFile	filesys/openfile.cc	/^OpenFile::~OpenFile()$/;"	f	class:OpenFile
+~OpenFile	filesys/openfile.h	/^    ~OpenFile() { Close(file); }			\/\/ close the file$/;"	f	class:OpenFile
+~PersistBitMap	filesys/pbitmap.cc	/^PersistBitMap::~PersistBitMap()$/;"	f	class:PersistBitMap
+~PostOfficeInput	network/post.cc	/^PostOfficeInput::~PostOfficeInput()$/;"	f	class:PostOfficeInput
+~PostOfficeOutput	network/post.cc	/^PostOfficeOutput::~PostOfficeOutput()$/;"	f	class:PostOfficeOutput
+~Scheduler	threads/scheduler.cc	/^Scheduler::~Scheduler()$/;"	f	class:Scheduler
+~Semaphore	threads/synch.cc	/^Semaphore::~Semaphore()$/;"	f	class:Semaphore
+~SortedList	lib/list.h	/^    ~SortedList() {};		\/\/ base class destructor called automatically$/;"	f	class:SortedList
+~SynchConsoleInput	userprog/synchconsole.cc	/^SynchConsoleInput::~SynchConsoleInput()$/;"	f	class:SynchConsoleInput
+~SynchConsoleOutput	userprog/synchconsole.cc	/^SynchConsoleOutput::~SynchConsoleOutput()$/;"	f	class:SynchConsoleOutput
+~SynchDisk	filesys/synchdisk.cc	/^SynchDisk::~SynchDisk()$/;"	f	class:SynchDisk
+~SynchList	threads/synchlist.cc	/^SynchList<T>::~SynchList()$/;"	f	class:SynchList
+~Thread	threads/thread.cc	/^Thread::~Thread()$/;"	f	class:Thread
+~ThreadedKernel	threads/kernel.cc	/^ThreadedKernel::~ThreadedKernel()$/;"	f	class:ThreadedKernel
+~Timer	machine/timer.h	/^    virtual ~Timer() {}$/;"	f	class:Timer
+~UserProgKernel	userprog/userkernel.cc	/^UserProgKernel::~UserProgKernel()$/;"	f	class:UserProgKernel
