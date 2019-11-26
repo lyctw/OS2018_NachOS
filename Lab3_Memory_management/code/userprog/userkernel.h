@@ -47,10 +47,10 @@ class UserProgKernel : public ThreadedKernel {
 #endif // FILESYS
 
   private:
-    bool debugUserProg;		// single step user program
+    bool    debugUserProg;		// single step user program
 	Thread* t[10];
 	char*	execfile[10];
-	int	execfileNum;
+	int	    execfileNum;
 };
 
 #endif //USERKERNEL_H

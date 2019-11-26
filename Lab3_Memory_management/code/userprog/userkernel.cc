@@ -68,7 +68,7 @@ UserProgKernel::Initialize()
     swapTable = new int[NumSectors];
     counter = 0;
 
-    cout << "The replacement rule is ";
+    cout << "The replacement rule is "; 
     switch(replaceRule)
     {
         case FIFO: cout << "FIFO"; break;

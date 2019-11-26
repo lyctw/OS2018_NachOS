@@ -136,9 +136,17 @@ class Machine {
 
     char *mainMemory;		// physical memory to store user program,
 				// code and data, while executing
-    FreePage* freePhysicalPage; //project_added
-    struct FrameTable { TranslationEntry* pageTable; Thread* t; bool inIO; }* frameTable;
+
+    /// yc start ///////////////
+    FreePage* freePhysicalPage; 
+    struct FrameTable { 
+        TranslationEntry* pageTable; // virtual page which is stored by the physical page 
+        Thread* t; 
+        bool inIO; // whether this physical page is doing r/w
+    }* frameTable;
+
     int lastFrame;
+    /// yc end ///////////////
 
 // NOTE: the hardware translation of virtual addresses in the user program
 // to physical addresses (relative to the beginning of "mainMemory")
@@ -159,7 +167,7 @@ class Machine {
 // the contents of the TLB are free to be modified by the kernel software.
 
     TranslationEntry *tlb;		// this pointer should be considered 
-					// "read-only" to Nachos kernel code
+					            // "read-only" to Nachos kernel code
 
     TranslationEntry *pageTable;
     unsigned int pageTableSize;

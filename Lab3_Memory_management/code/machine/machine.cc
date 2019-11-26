@@ -62,9 +62,11 @@ Machine::Machine(bool debug)
 //cout << "Main memory: " << (void*)mainMemory << endl;
     for (i = 0; i < MemorySize; i++)
       	mainMemory[i] = 0;
+    // yc start
     freePhysicalPage = new FreePage(NumPhysPages);
     frameTable = new FrameTable[NumPhysPages];
     lastFrame = -1;
+    // yc end
 #ifdef USE_TLB
     tlb = new TranslationEntry[TLBSize];
     for (i = 0; i < TLBSize; i++)

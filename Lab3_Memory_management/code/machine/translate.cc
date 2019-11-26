@@ -153,8 +153,8 @@ Machine::WriteMem(int addr, int size, int value)
 
     exception = Translate(addr, &physicalAddress, size, TRUE);
     if (exception != NoException) {
-	RaiseException(exception, addr);
-	return FALSE;
+    	RaiseException(exception, addr);
+    	return FALSE;
     }
     switch (size) {
       case 1:
@@ -249,27 +249,27 @@ Machine::Translate(int virtAddr, int* physAddr, int size, bool writing)
     }
     pageFrame = entry->physicalPage;
 
-/* project_added */
-int swapIndex = entry->virtualPage;
-ASSERT(swapIndex < NumSectors);
-switch(kernel->replaceRule)
-{
-    case LRU:
-        kernel->swapTable[swapIndex] = ++kernel->counter;
-        break;
+    /// yc start /////////
+    int swapIndex = entry->virtualPage;
+    ASSERT(swapIndex < NumSectors);
+    switch(kernel->replaceRule)
+    {
+        case LRU:
+            kernel->swapTable[swapIndex] = ++kernel->counter;
+            break;
 
-    case LFU:
-        ++kernel->swapTable[swapIndex];
-        break;
+        case LFU:
+            ++kernel->swapTable[swapIndex];
+            break;
 
-    case MFU:
-        --kernel->swapTable[swapIndex];
-        break;
+        case MFU:
+            --kernel->swapTable[swapIndex];
+            break;
 
-    default:
-        break;
-}
-/* project_added */
+        default:
+            break;
+    }
+    /// yc end /////////
 
     // if the pageFrame is too big, there is something really wrong! 
     // An invalid translation was loaded into the page table or TLB. 
