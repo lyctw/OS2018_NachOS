@@ -35,7 +35,7 @@ class UserProgKernel : public ThreadedKernel {
     // yc start
     Machine *machine;
     FileSystem *fileSystem;
-    SynchDisk* swapMemory; // for virtual memory
+    SynchDisk* swapMemory; // secondary memory
     FreePage* freeSwapSector;
     int* swapTable;
     ReplaceRule replaceRule;

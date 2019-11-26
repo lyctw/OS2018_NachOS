@@ -53,7 +53,8 @@ SwapHeader (NoffHeader *noffH)
 //----------------------------------------------------------------------
 
 AddrSpace::AddrSpace(): pageTable(0)
-{/*
+{
+/* 
     pageTable = new TranslationEntry[NumPhysPages];
     for (unsigned int i = 0; i < NumPhysPages; i++) {
 	pageTable[i].virtualPage = i;	// for now, virt page # = phys page #
@@ -64,7 +65,8 @@ AddrSpace::AddrSpace(): pageTable(0)
 	pageTable[i].use = FALSE;
 	pageTable[i].dirty = FALSE;
 	pageTable[i].readOnly = FALSE;  
-    }*/
+    }
+*/
     
     // zero out the entire address space
 //    bzero(kernel->machine->mainMemory, MemorySize);
@@ -107,8 +109,8 @@ AddrSpace::Load(char *fileName)
     //cout << "Laoding " << fileName << endl;
 
     if (executable == NULL) {
-	cerr << "Unable to open file " << fileName << "\n";
-	return FALSE;
+    	cerr << "Unable to open file " << fileName << "\n";
+    	return FALSE;
     }
 //    cout << "Loading " << fileName << endl;
     executable->ReadAt((char *)&noffH, sizeof(noffH), 0);
@@ -182,7 +184,11 @@ AddrSpace::Load(char *fileName)
             int remain = restPlace(va);
             if(s < remain) remain = s;
 	//cout << "Before: s = " << s << ", va = " << va << ", ia = " << ia << ", remain = " << remain << ", pa = " << VirToPhy(va) << endl;
-            executable->ReadAt(tmp + va, remain, ia);
+            executable->ReadAt(
+                tmp + va, 
+                remain, 
+                ia
+            );
             s -= remain; 
             va += remain; 
             ia += remain;

@@ -71,7 +71,7 @@ ShortToMachine(unsigned short shortword) { return ShortToHost(shortword); }
 void TranslationEntry::init()
 {
     ASSERT(!kernel->freeSwapSector->empty())
-    virtualPage  = kernel->freeSwapSector->pop();
+    virtualPage  = kernel->freeSwapSector->pop(); // mapping between the virtual and physical page
     kernel->swapTable[virtualPage] = 0;
     valid        = FALSE;
     readOnly     = FALSE;
