@@ -45,7 +45,7 @@ SynchDisk::~SynchDisk()
     delete disk;
     delete lock;
     delete semaphore;
-}
+} 
 
 //----------------------------------------------------------------------
 // SynchDisk::ReadSector
