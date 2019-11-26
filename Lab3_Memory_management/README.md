@@ -89,25 +89,71 @@ main()
 }
 ```
 
+## Virtual Memory
+
+### Demand Paging
+
+Demand paging follows that pages should only be brought into memory if the executing process demands them. This is often referred to as lazy evaluation as only those pages demanded by the process are swapped from secondary storage to main memory. 
+Commonly, to achieve this process a page table implementation is used. The page table maps logical memory to physical memory. The page table uses a bitwise operator to mark if a page is valid or invalid. A valid page is one that currently resides in main memory. An invalid page is one that currently resides in secondary memory. When a process tries to access a page, the following steps are generally followed:
+
+1. Attempt to access page.
+    * If page is valid (in memory) then continue processing instruction as normal.
+    * If page is invalid then a page-fault trap occurs.
+2. Check if the memory reference is a valid reference to a location on secondary memory. If not, the process is terminated (illegal memory access). Otherwise, we have to page in the required page.
+3. Schedule disk operation to read the desired page into main memory.
+Restart the instruction that was interrupted by the operating system trap.
+
+<!-- ![](https://i.imgur.com/gHsVvGu.png) -->
+
+![](https://i.imgur.com/uw0wPw8.png)
+
+### Page Replacemant
+
+Page replacement happens when a requested page is not in memory (page fault) and a free frame cannot be used to satisfy the allocation. Therefore, we need to choose and swap out a *victim page (replaced page)* to the secondary memory (e.g. Disk).
+
+![](https://i.imgur.com/wmgzsJE.png)
+
+
+Page Replacemant Algo.
+
+1. FIFO
+2. LRU
+3. LFU
+4. MFU
+
+
 ## Code
 
+* `/filesys/synchdisk.h`
+    * Using semaphore to synchronize disk memory
+* `/filesys/synchdisk.cc`
 * `/userprog/userkernel.h`
     * Add a `SynchDisk` object to create a swap area.
+    * `ReplaceRule` to decide which page replacement algo is used. 
+    * Define **swapTable**, record the counter of virtual page, we will select a victim page based on the counter which is updated every memory access and page fault occur (see ``/machine/translate.cc``). 
 * `/userprog/userkernel.cc`
-    * In the `UserProgKernel` constructor, allocate swap area dynamically.
+    * `UserProgKernel::Initialize`, allocate swap memory area dynamically.
+    * `UserProgKernel::UserProgKernel` command interface
+        1. `-fifo`
+        2. `-lru`
+        3. `-lfu`
+        4. `-mfu`
 * `/machine/machine.h`
-    * Define some public veriables to record which main memory frame has been used, ID, sector and frame number.
-    * Futhermore, we need to record some informations for the page replacement algorithm implementation.
+    * Define **frameTable** structure
+* `/machine/machine.cc`
+    * `Machine::Machine` allocate free physical pages and frameTable
 * `/userprog/addrspace.cc`
     1. Uncomment the assertion which will terminate the user program when number of page is greater then number of physical page then we can provide the virtual memory serivce.
     2. AddrSpace::Load
-        * Use the main memory first, if it isn't enough store the remain pages to virtual memory which can be accessed by `kernel->Swap_area->WriteSector`
-        * Mark them as invalid then the trap of page fault occur, NachOS will search it from virtual memory space.
-    4. AddrSpace::SaveState
-        * Save the process state when context switch and the page table is loaded.
+        * Load a user program into memory from a file.
 * `/machine/translate.h`
-    1. `LRU_times` is used to count which page is least used one in the main memory.
+    1. `TranslationEntry` - Define **pageTable**
 * `/machine/translate.cc`
+    1. `Machine::Translate` will return `ExceptionType`, **translate a virtual address into a physical address**, check valid bit (if invalid, return `PageFaultException`) and update swapTable
+    2. `TranslationEntry::init()` - Initialize the pageTable and map between the virtual and physical page
+
+
+## Result
 
 
 
