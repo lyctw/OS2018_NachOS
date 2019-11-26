@@ -153,4 +153,8 @@ Page Replacemant Algo.
     2. `TranslationEntry::init()` - Initialize the pageTable and map between the virtual and physical page
 
 
+## Result
+
+
+
 ###### tags: `Operating System` `NachOS`
