@@ -155,6 +155,32 @@ Page Replacemant Algo.
 
 ## Result
 
+```
+yc@yc-VirtualBox:~/nachos-4.0/code/userprog$ ./nachos -e ../test/sort -fifo
+The replacement rule is FIFO
+Total threads number is 1
+Thread ../test/sort is executing.
+return value:1
+No threads ready or runnable, and no pending interrupts.
+Assuming the program completed.
+Machine halting!
+
+Ticks: total 121712522, idle 81876482, system 1025840, user 38810200
+Disk I/O: reads 5711, writes 5004
+Console I/O: reads 0, writes 0
+Paging: faults 5711
+Network I/O: packets received 0, sent 0
+
+```
+
+Number of page fault
+
+|  | FIFO | LRU | LFU |
+| -------- | -------- | -------- |-------- |
+| sort           | 5711     | Text     | Text     |
+| matmult        | Text     | Text     | Text     |
+| sort + matmult | Text     | Text     | Text     |
+| matmult + sort | Text     | Text     | Text     |
 
 
 ###### tags: `Operating System` `NachOS`
